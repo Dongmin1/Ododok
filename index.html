@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>민동 마케팅 | 1인 마케팅 대행</title>
+
+  <meta
+    name="description"
+    content="네이버 플레이스, 블로그, 인스타그램, 광고 운영을 대표가 직접 진행합니다."
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo">민동마케팅</a>
+
+      <nav>
+        <a href="#services">서비스</a>
+        <a href="#portfolio">성과</a>
+        <a href="#about">소개</a>
+        <a href="#contact">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">1인 마케팅 에이전시</p>
+
+        <h1>
+          광고만 돌리지 않습니다.<br />
+          매출이 오르는 구조를 만듭니다.
+        </h1>
+
+        <p class="hero-description">
+          네이버 플레이스, 블로그, 인스타그램, 광고 운영까지
+          대표가 직접 기획하고 실행합니다.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="button primary">무료 상담 신청</a>
+          <a href="#portfolio" class="button secondary">성과 사례 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <p class="section-label">SERVICES</p>
+        <h2>필요한 마케팅만 제안합니다</h2>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>네이버 플레이스</h3>
+            <p>
+              검색 노출, 리뷰 관리, 사진 구성, 소식 발행을 통해
+              실제 방문 전환을 높입니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>블로그 마케팅</h3>
+            <p>
+              단순 원고 배포가 아니라 고객이 검색하는 키워드를 분석해
+              콘텐츠를 제작합니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>인스타그램 운영</h3>
+            <p>
+              브랜드 톤에 맞는 콘텐츠 기획, 피드 운영, 숏폼 제작을
+              진행합니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>광고 운영</h3>
+            <p>
+              광고비만 소진하지 않도록 성과를 분석하고
+              캠페인을 지속적으로 개선합니다.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section section-gray">
+      <div class="container">
+        <p class="section-label">RESULTS</p>
+        <h2>성과로 보여드립니다</h2>
+
+        <div class="result-grid">
+          <article class="result-card">
+            <strong>+185%</strong>
+            <span>플레이스 검색 유입 증가</span>
+          </article>
+
+          <article class="result-card">
+            <strong>3.2배</strong>
+            <span>광고 문의 전환 증가</span>
+          </article>
+
+          <article class="result-card">
+            <strong>-32%</strong>
+            <span>고객 획득 비용 감소</span>
+          </article>
+        </div>
+
+        <p class="notice">
+          실제 홈페이지에는 본인이 담당했던 사례를 회사 정보와 고객 정보가
+          노출되지 않도록 정리해서 넣는 것이 좋습니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about">
+        <div>
+          <p class="section-label">ABOUT</p>
+          <h2>담당자가 계속 바뀌지 않습니다</h2>
+        </div>
+
+        <div>
+          <p>
+            상담만 대표가 하고 실제 업무는 다른 직원이 하는 방식이 아닙니다.
+            상담, 기획, 실행, 성과 보고까지 한 사람이 직접 담당합니다.
+          </p>
+
+          <p>
+            규모가 큰 대행사보다 빠르게 소통하고, 사업 상황에 맞는 현실적인
+            전략을 제안합니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-box">
+        <div>
+          <p class="section-label">CONTACT</p>
+          <h2>현재 마케팅 상황을 알려주세요</h2>
+          <p>
+            업종, 지역, 현재 고민을 남겨주시면 확인 후 연락드리겠습니다.
+          </p>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <label>
+            이름
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            연락처
+            <input type="tel" name="phone" required />
+          </label>
+
+          <label>
+            업체명
+            <input type="text" name="company" />
+          </label>
+
+          <label>
+            문의 내용
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+
+          <button type="submit" class="button primary">
+            상담 신청하기
+          </button>
+
+          <p id="formMessage" class="form-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 민동마케팅. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
