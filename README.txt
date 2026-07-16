@@ -1,20 +1,13 @@
-ODODOK 4.0
+ODODOK 최종 정리본
 
-1. 압축을 풉니다.
-2. index.html, style.css, script.js, images 폴더를 기존 GitHub 저장소에 덮어씁니다.
-3. Live Server에서 index.html을 확인합니다.
-4. your@email.com을 실제 이메일로 변경합니다.
+중요: 폴더 구조 없이 아래 5개 파일을 GitHub 저장소 첫 화면에 그대로 업로드하세요.
 
-변경사항
-- 첫 화면, 책 영역, 마지막 메시지 영역에 로고 배치
-- 오도독 컬러 시스템 적용
-- SUIT 기반 타이포그래피
-- 1.2초 페이드 애니메이션
-- 모바일 레이아웃 조정
+- index.html
+- style.css
+- script.js
+- ododok-logo.png
+- book-front.png
 
-ODODOK 4.1 변경 사항
-- 모바일 대형 문구 크기 10~15% 축소
-- 모바일 제목 줄간격 정리
-- 첫 화면 로고 크기 축소
-- 믿음/목적/마지막 문장/문의 화면 가독성 조정
-- 책 영역의 제목과 표지 비율 조정
+이미지 경로는 모두 최상위 파일 기준으로 맞춰져 있습니다.
+기존 파일과 같은 이름으로 업로드한 뒤 Commit changes를 누르세요.
+배포 완료 후 Ctrl + Shift + R로 강력 새로고침하세요.
