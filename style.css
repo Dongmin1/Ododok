@@ -85,3 +85,49 @@ footer strong{letter-spacing:.25em}
   .story-lines{margin-top:48px}
   footer{flex-direction:column;align-items:flex-start;gap:12px}
 }
+
+/* ODODOK 4.1 — mobile typography refinement */
+.hero h1,.panel h2{line-height:1.10}
+
+@media(max-width:800px){
+  header{height:72px;padding:0 30px}
+  .wordmark{font-size:20px}
+  .panel{padding:104px 28px 76px}
+
+  .hero-logo{width:min(220px,66vw);margin-bottom:14px}
+  .hero h1{font-size:clamp(42px,12vw,58px);line-height:1.12}
+
+  .question h2{font-size:clamp(38px,10.8vw,50px);line-height:1.16}
+
+  .story-lines p{font-size:clamp(28px,8.2vw,38px);line-height:1.48;margin:16px 0}
+  .story-lines{margin-top:54px}
+
+  .belief h2{font-size:clamp(38px,10.5vw,50px);line-height:1.26}
+
+  .purpose-title{font-size:clamp(38px,10.5vw,48px)!important;line-height:1.20}
+  .purpose .lead{font-size:clamp(23px,6.6vw,30px);line-height:1.58;margin-top:34px}
+
+  .book-copy h2{font-size:clamp(50px,13vw,64px);line-height:1.12}
+  .book-copy>p:last-child{font-size:17px;line-height:1.5}
+  .book-stage{min-height:430px}
+  .book-stage img{width:min(340px,76vw)}
+
+  .basic blockquote{font-size:clamp(34px,9.3vw,44px);line-height:1.38;margin:18px auto 36px}
+
+  .manifesto h2{font-size:clamp(36px,9.8vw,46px);line-height:1.22}
+
+  .contact h2{font-size:clamp(38px,10.2vw,48px);line-height:1.24}
+  .links a{font-size:19px}
+}
+
+@media(max-width:390px){
+  .panel{padding-left:24px;padding-right:24px}
+  .hero h1{font-size:44px}
+  .question h2{font-size:40px}
+  .belief h2{font-size:39px}
+  .purpose-title{font-size:39px!important}
+  .book-copy h2{font-size:52px}
+  .basic blockquote{font-size:36px}
+  .manifesto h2{font-size:38px}
+  .contact h2{font-size:40px}
+}
