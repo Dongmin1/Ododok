@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://dongmin1.github.io/Ododok/">
   <meta name="description" content="오도독은 기본을 기록하고, 사람과 브랜드가 오래갈 수 있는 단단한 기준을 만듭니다.">
   <meta property="og:title" content="오도독 | 기본이 멀리 간다">
   <meta property="og:description" content="화려한 기술보다 오래가는 기본. 오도독은 기본을 기록합니다.">
@@ -14,6 +15,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/blog.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -26,7 +28,7 @@
       <nav class="desktop-nav" aria-label="주요 메뉴">
         <a class="active" href="#top">HOME</a>
         <a href="#philosophy">PHILOSOPHY</a>
-        <a href="#contents">CONTENTS</a>
+        <a href="blog/">CONTENTS</a>
         <a href="#projects">PROJECTS</a>
         <a href="#about">ABOUT</a>
         <a href="#contact">CONTACT</a>
@@ -58,7 +60,7 @@
           <p class="desc hero-reveal" style="--delay:.24s">화려함보다 오래가는 것.<br>오도독은 기본을 기록합니다.</p>
           <div class="actions hero-reveal" style="--delay:.34s">
             <a class="btn fill" href="#philosophy">브랜드 보기 <b>→</b></a>
-            <a class="btn" href="#contents">콘텐츠 보기 <b>→</b></a>
+            <a class="btn" href="blog/">콘텐츠 보기 <b>→</b></a>
           </div>
         </div>
         <div class="hero-photo hero-reveal" style="--delay:.22s" role="img" aria-label="책과 찻잔이 놓인 오도독 브랜드 이미지"></div>
@@ -92,12 +94,14 @@
         <div class="posts">
           <div class="bar reveal">
             <h2>최신 콘텐츠</h2>
-            <a href="#">모든 글 보기 <span>→</span></a>
+            <a href="blog/">모든 글 보기 <span>→</span></a>
           </div>
           <div class="cards">
             <article class="reveal" style="--delay:.05s">
-              <div class="card-image"><img src="assets/images/content-1.png" alt="화병과 식물" loading="lazy"></div>
-              <div><small>브랜딩</small><h3>브랜드의 기본은<br>무엇일까?</h3><p>좋은 브랜드는 화려함이 아니라<br>일관된 기본에서 만들어집니다.</p><footer>2026.07.19 <b>→</b></footer></div>
+              <a class="card-link" href="blog/basic.html" aria-label="기본이 멀리 가는 이유 읽기">
+                <div class="card-image"><img src="assets/images/content-1.png" alt="화병과 식물" loading="lazy"></div>
+                <div><small>생각</small><h3>기본이 멀리 가는<br>이유</h3><p>눈에 띄는 기술보다 오래 남는 것은<br>매일 반복하는 기본입니다.</p><footer>2026.07.19 <b>→</b></footer></div>
+              </a>
             </article>
             <article class="reveal" style="--delay:.12s">
               <div class="card-image"><img src="assets/images/content-2.png" alt="노트와 커피" loading="lazy"></div>
@@ -120,7 +124,7 @@
         </div>
         <div class="project-grid">
           <article class="reveal" style="--delay:.05s"><span>▢</span><div><small>BOOK</small><h3>기본이 멀리 간다.</h3><p>출간</p></div></article>
-          <article class="reveal" style="--delay:.12s"><span>▤</span><div><small>CONTENTS</small><h3>블로그와 뉴스레터</h3><p>기본에 대한 기록</p></div></article>
+          <a class="project-link reveal" style="--delay:.12s" href="blog/"><article><span>▤</span><div><small>CONTENTS</small><h3>블로그와 뉴스레터</h3><p>기본에 대한 기록</p></div></article></a>
           <article class="reveal" style="--delay:.19s"><span>♙</span><div><small>LECTURE</small><h3>강의 &amp; 워크숍</h3><p>준비 중</p></div></article>
           <article class="reveal" style="--delay:.26s"><span>◌</span><div><small>CONSULTING</small><h3>브랜딩 컨설팅</h3><p>준비 중</p></div></article>
         </div>
