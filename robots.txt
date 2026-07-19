@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://dongmin1.github.io/Ododok/sitemap.xml
+Sitemap: https://dongmin1.github.io/Ododok/sitemap-v2.xml
