@@ -1,8 +1,0 @@
-.hero-reveal{opacity:0;transform:translateY(22px);animation:heroIn .85s var(--ease) forwards;animation-delay:var(--delay,0s)}.hero-photo.hero-reveal{transform:translateY(0) scale(1.025);animation:heroImageIn 1.15s var(--ease) forwards;animation-delay:var(--delay,0s)}.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--delay,0s)}.reveal.is-visible{opacity:1;transform:none}@keyframes heroIn{to{opacity:1;transform:none}}@keyframes heroImageIn{to{opacity:1;transform:scale(1)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-reveal,.reveal{opacity:1;transform:none;animation:none;transition:none}.hero-photo{transform:none!important}.btn,.cards article,.cards img,.project-grid article,.project-grid span{transition:none}}
-
-/* V2.3 refinement */
-.hero-photo{transition:filter .55s var(--ease)}.hero:hover .hero-photo{filter:contrast(1.015) saturate(.96)}
-
-/* V2.4 softer motion */
-.hero-photo{transition:transform .16s linear,filter .45s var(--ease)}
-.hero:hover .hero-photo{filter:saturate(1.015) contrast(1.01)}
