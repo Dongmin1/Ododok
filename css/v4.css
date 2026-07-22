@@ -32,3 +32,26 @@
 .sample-priority ol{display:flex;gap:30px;flex-wrap:wrap;margin:18px 0 0;padding-left:22px;font-weight:700}
 @media(max-width:900px){.sample-grid{grid-template-columns:1fr;gap:50px}.philosophy-copy{margin-left:0}.hero-v4-grid{min-height:auto}}
 @media(max-width:600px){.hero-v4{padding:105px 0 75px}.hero-v4 h1{font-size:54px}.hero-channel{font-size:13px;line-height:1.7}.hero-lead{font-size:17px}.philosophy-v9>h2{margin-bottom:48px;font-size:52px}.philosophy-copy p{font-size:24px}.philosophy-copy .philosophy-highlight{margin-top:45px;font-size:29px}.sample-report{padding:25px;border-radius:22px}.sample-report h3{font-size:27px}.sample-items>div{grid-template-columns:1fr;gap:7px;padding:18px 0}.sample-priority ol{display:grid;gap:12px}.footer-v4 div:last-child span{max-width:250px}}
+
+
+/* ===== ODODOK V10: first-view CTA & visual balance ===== */
+.hero-v4{padding:118px 0 76px}
+.hero-v4-grid{min-height:590px;align-items:center}
+.hero-v4 h1{font-size:clamp(58px,6.45vw,96px);line-height:.96;margin:16px 0 24px}
+.hero-channel{margin-bottom:12px}
+.hero-lead{font-size:18px;line-height:1.58}
+.hero-actions{margin-top:25px}
+.primary-cta{min-height:56px;padding:0 26px}
+.hero-note{margin-top:13px}
+.diagnosis-preview h2{font-size:32px;line-height:1.18}
+@media(max-width:900px){
+  .hero-v4{padding:118px 0 76px}
+  .hero-v4-grid{min-height:auto}
+}
+@media(max-width:600px){
+  .hero-v4{padding:102px 0 64px}
+  .hero-v4 h1{font-size:50px;line-height:1}
+  .hero-lead{font-size:16px}
+  .hero-actions{margin-top:22px}
+  .primary-cta{width:100%;justify-content:space-between}
+}
