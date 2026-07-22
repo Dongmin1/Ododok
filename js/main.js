@@ -62,3 +62,38 @@ newsletterForm?.addEventListener('submit', event => {
   event.preventDefault();
   alert('뉴스레터 구독 기능은 준비 중입니다.');
 });
+
+const diagnosisModal = document.querySelector('#diagnosis-modal');
+const diagnosisForm = document.querySelector('#diagnosis-form');
+const diagnosisSteps = [...document.querySelectorAll('.diagnosis-step')];
+const diagnosisProgress = document.querySelector('.modal-progress span');
+let diagnosisStep = 1;
+
+const showDiagnosisStep = step => {
+  diagnosisStep = step;
+  diagnosisSteps.forEach(el => el.classList.toggle('active', Number(el.dataset.step) === step));
+  if (diagnosisProgress) diagnosisProgress.style.width = `${Math.min(step, 3) * 33.333}%`;
+};
+const openDiagnosis = () => {
+  diagnosisModal?.classList.add('open');
+  diagnosisModal?.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  showDiagnosisStep(1);
+};
+const closeDiagnosis = () => {
+  diagnosisModal?.classList.remove('open');
+  diagnosisModal?.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+};
+document.querySelectorAll('[data-open-diagnosis]').forEach(btn => btn.addEventListener('click', openDiagnosis));
+document.querySelectorAll('[data-close-diagnosis]').forEach(btn => btn.addEventListener('click', closeDiagnosis));
+document.querySelectorAll('.modal-next').forEach(btn => btn.addEventListener('click', () => {
+  if (diagnosisStep === 1) {
+    const field = diagnosisForm?.querySelector('[name="business"]');
+    if (!field?.value.trim()) { field?.focus(); return; }
+  }
+  showDiagnosisStep(Math.min(diagnosisStep + 1, 3));
+}));
+document.querySelectorAll('.modal-prev').forEach(btn => btn.addEventListener('click', () => showDiagnosisStep(Math.max(diagnosisStep - 1, 1))));
+diagnosisForm?.addEventListener('submit', event => { event.preventDefault(); showDiagnosisStep(4); });
+window.addEventListener('keydown', event => { if (event.key === 'Escape') closeDiagnosis(); });
