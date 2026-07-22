@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://dongmin1.github.io/Ododok/sitemap.xml
