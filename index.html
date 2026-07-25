@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dongmin1.github.io/Ododok/">
   <link rel="canonical" href="https://dongmin1.github.io/Ododok/">
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/ododok-logo.png" type="image/svg+xml">
   <style>
     :root{--ink:#101311;--muted:#68706c;--line:#e5e8e6;--soft:#f5f7f5;--green:#215f43;--green2:#eaf4ee;--max:1180px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;letter-spacing:-.025em;line-height:1.55;-webkit-font-smoothing:antialiased}button,input,textarea,select{font:inherit}button,a{color:inherit}a{text-decoration:none}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
@@ -24,12 +24,23 @@
     .cta{text-align:center;background:linear-gradient(#fff,#f2f5f3)}.cta h2{font-size:clamp(39px,5vw,66px);line-height:1.08;letter-spacing:-.06em;margin:14px 0}.cta p{color:var(--muted);font-size:18px}.cta .primary{margin-top:12px;padding:17px 27px}
     footer{padding:32px 0;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--muted);font-size:13px}.foot img{width:190px}.foot-links{display:flex;gap:16px}
     .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(10,12,11,.6);backdrop-filter:blur(8px)}.modal.open{display:flex}.dialog{width:min(760px,100%);max-height:94vh;overflow:auto;background:#fff;border-radius:28px;box-shadow:0 30px 100px rgba(0,0,0,.3)}.dialog-head{display:flex;justify-content:space-between;align-items:center;padding:20px 25px;border-bottom:1px solid var(--line)}.dialog-head img{width:190px}.close{width:40px;height:40px;border:0;border-radius:50%;background:#eff2f0;font-size:23px;cursor:pointer}.form-body{padding:28px}.form-title{font-size:30px;margin:0 0 7px}.form-sub{margin:0 0 25px;color:var(--muted)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field-group{display:grid;gap:7px}.field-group.full{grid-column:1/-1}.field-group label{font-size:13px;font-weight:850}.req{color:#c44848}.field-group input,.field-group select,.field-group textarea{width:100%;padding:15px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;outline:none}.field-group textarea{min-height:110px;resize:vertical}.field-group input:focus,.field-group select:focus,.field-group textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(33,95,67,.08)}.checks{display:grid;grid-template-columns:1fr 1fr;gap:9px}.check-item{display:flex;gap:9px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:12px}.privacy{display:flex;align-items:flex-start;gap:9px;margin:19px 0;font-size:13px;color:var(--muted)}.submit{width:100%;padding:17px}.notice{padding:13px 15px;background:var(--green2);border-radius:13px;color:#335e49;font-size:13px;margin-top:13px}.success{display:none;text-align:center;padding:45px 20px}.success.show{display:block}.success-icon{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;background:var(--green2);color:var(--green);font-size:30px;font-weight:900}.success h3{font-size:30px;margin:0 0 10px}.success p{color:var(--muted)}.success-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}.secondary{border:1px solid var(--line);border-radius:999px;background:#fff;padding:13px 18px;font-weight:850;cursor:pointer}
-    @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.quick-card{max-width:650px}.links a{display:none}.problem-grid{grid-template-columns:1fr 1fr}.report-grid{grid-template-columns:1fr 1fr}.section-head{display:block}.desc{margin-top:18px}}
+
+    .brand img,.dialog-head img,.foot img{height:auto;object-fit:contain}
+    .kakao-section{padding:104px 0;background:#fff}
+    .kakao-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
+    .kakao-grid h2{font-size:clamp(38px,5vw,62px);line-height:1.08;letter-spacing:-.06em;margin:14px 0 18px}
+    .kakao-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+    .qr-card{justify-self:end;width:min(100%,380px);padding:24px;border:1px solid var(--line);border-radius:28px;background:var(--soft);text-align:center;box-shadow:0 20px 60px rgba(16,19,17,.07)}
+    .qr-card img{display:block;width:100%;border-radius:20px;background:#fff}
+    .qr-card strong{display:block;font-size:19px;margin-top:16px}
+    .qr-card span{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+
+    @media(max-width:900px){.hero-grid,.kakao-grid{grid-template-columns:1fr}.qr-card{justify-self:start}.quick-card{max-width:650px}.links a{display:none}.problem-grid{grid-template-columns:1fr 1fr}.report-grid{grid-template-columns:1fr 1fr}.section-head{display:block}.desc{margin-top:18px}}
     @media(max-width:620px){.wrap{width:min(calc(100% - 24px),var(--max))}.nav{height:66px}.brand img{width:180px}.navbtn{font-size:12px;padding:10px 13px}.hero{min-height:auto;padding:68px 0}.hero-grid{gap:32px}h1{font-size:47px}.lead{font-size:18px}.quick-card{padding:20px}section{padding:76px 0}.problem-grid,.report-grid,.principles,.form-grid,.checks{grid-template-columns:1fr}.field-group.full{grid-column:auto}.problem,.report-card{min-height:auto}.form-body{padding:23px 18px}.form-title{font-size:26px}.foot{align-items:flex-start;flex-direction:column}}
   </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#top"><img src="assets/logo.svg" alt="ODODOK 기본이 멀리 간다"></a><nav class="links"><a href="#problems">고민</a><a href="#report">진단 리포트</a><a href="#principles">원칙</a><button class="navbtn js-open">무료 진단</button></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="#top"><img src="assets/ododok-logo.png" alt="ODODOK 기본이 멀리 간다"></a><nav class="links"><a href="#problems">고민</a><a href="#report">진단 리포트</a><a href="#principles">원칙</a><button class="navbtn js-open">무료 진단</button></nav></div></header>
 
 <main id="top">
 <section class="hero">
@@ -94,16 +105,36 @@
   </div>
 </section>
 
+
+<section class="kakao-section">
+  <div class="wrap kakao-grid">
+    <div>
+      <span class="eyebrow">Kakao Channel</span>
+      <h2>무료 진단은<br>카카오톡에서 이어집니다.</h2>
+      <p class="desc">QR코드를 스캔하거나 버튼을 눌러 오도독 채널에서 바로 상담을 시작하세요.</p>
+      <div class="kakao-actions">
+        <a class="primary" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener">카카오톡 무료 진단 시작하기 →</a>
+        <a class="secondary" href="https://pf.kakao.com/_xmunxnX/friend" target="_blank" rel="noopener">채널 친구 추가</a>
+      </div>
+    </div>
+    <div class="qr-card">
+      <img src="assets/kakao-qr.jpg" alt="ODODOK 카카오톡 채널 QR코드">
+      <strong>ODODOK 카카오톡 채널</strong>
+      <span>@ODODOK</span>
+    </div>
+  </div>
+</section>
+
 <section class="cta">
   <div class="wrap"><span class="eyebrow">Start from Basics</span><h2>지금 필요한 순서부터<br>함께 찾겠습니다.</h2><p>정확한 진단을 위해 업체 정보와 운영 중인 채널을 확인합니다.</p><button class="primary js-open">무료 진단 신청하기 →</button></div>
 </section>
 </main>
 
-<footer><div class="wrap foot"><img src="assets/logo.svg" alt="ODODOK"><div class="foot-links"><a href="https://blog.naver.com/rajkjk" target="_blank" rel="noopener">Blog</a><a href="#top">맨 위로</a><span>© 2026 ODODOK</span></div></div></footer>
+<footer><div class="wrap foot"><img src="assets/ododok-logo.png" alt="ODODOK"><div class="foot-links"><a href="https://blog.naver.com/rajkjk" target="_blank" rel="noopener">Blog</a><a href="https://pf.kakao.com/_xmunxnX" target="_blank" rel="noopener">Kakao</a><a href="#top">맨 위로</a><span>© 2026 ODODOK</span></div></div></footer>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="formTitle">
   <div class="dialog">
-    <div class="dialog-head"><img src="assets/logo.svg" alt="ODODOK"><button class="close" aria-label="닫기">×</button></div>
+    <div class="dialog-head"><img src="assets/ododok-logo.png" alt="ODODOK"><button class="close" aria-label="닫기">×</button></div>
     <div id="formWrap" class="form-body">
       <h2 class="form-title" id="formTitle">무료 기본 진단 신청</h2>
       <p class="form-sub">실제 업체 확인과 정확한 진단을 위해 기본 정보를 입력해 주세요.</p>
@@ -129,7 +160,7 @@
         </div>
         <label class="privacy"><input id="privacy" type="checkbox" required> <span>개인정보 수집 및 무료 진단을 위한 이용에 동의합니다. 입력 정보는 진단과 상담 목적으로만 사용합니다.</span></label>
         <button class="primary submit" type="submit">신청 내용을 카카오톡으로 보내기</button>
-        <div class="notice">카카오톡 채널 개설 후 코드의 <b>KAKAO_CHANNEL_URL</b> 한 줄만 바꾸면 바로 연결됩니다.</div>
+        <div class="notice">신청 내용을 복사한 뒤 오도독 카카오톡 채널로 바로 연결됩니다.</div>
       </form>
     </div>
     <div id="success" class="success">
@@ -141,7 +172,7 @@
 </div>
 
 <script>
-const KAKAO_CHANNEL_URL = "https://pf.kakao.com/_YOUR_CHANNEL_ID/chat"; // 채널 개설 후 교체
+const KAKAO_CHANNEL_URL = "https://pf.kakao.com/_xmunxnX/chat";
 const modal=document.getElementById("modal"), formWrap=document.getElementById("formWrap"), success=document.getElementById("success");
 let finalMessage="";
 function openModal(){modal.classList.add("open");document.body.style.overflow="hidden";formWrap.style.display="block";success.classList.remove("show")}
