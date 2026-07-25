@@ -1,13 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286 64" role="img" aria-labelledby="title desc">
-  <title id="title">ODODOK</title>
-  <desc id="desc">원형 새싹 심볼과 ODODOK 워드마크</desc>
-  <g fill="none" stroke="#0b0d0c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="32" cy="32" r="27"/>
-    <path d="M32 46V28"/>
-    <path d="M32 31c-6.8-.8-11.3-4.8-13-10.5 6.8-.8 12 3.2 13 10.5Z" fill="#0b0d0c"/>
-    <path d="M32 31c6.8-.8 11.3-4.8 13-10.5-6.8-.8-12 3.2-13 10.5Z" fill="#0b0d0c"/>
-    <path d="M32 46c-4.2 3.2-7.6 7-10 11"/>
-    <path d="M32 46c4.2 3.2 7.6 7 10 11"/>
-  </g>
-  <text x="78" y="40" fill="#0b0d0c" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" letter-spacing="7.2">ODODOK</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 150" role="img" aria-labelledby="t d">
+<title id="t">ODODOK</title><desc id="d">기본이 멀리 간다</desc>
+<rect width="720" height="150" fill="white"/>
+<g fill="none" stroke="#215f43" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="68" cy="66" r="38"/>
+  <path d="M85 31c15-14 31-15 43-8-2 18-13 30-35 34"/>
+  <path d="M62 103c8-12 16-21 26-29"/>
+</g>
+<text x="132" y="74" font-family="Arial, Helvetica, sans-serif" font-size="55" font-weight="800" letter-spacing="4" fill="#101311">ODODOK</text>
+<text x="136" y="112" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" letter-spacing="3" fill="#69716d">기본이 멀리 간다.</text>
 </svg>
