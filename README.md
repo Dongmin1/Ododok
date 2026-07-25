@@ -1,24 +1,18 @@
-# ODODOK 홈페이지 v1.1 최종 배포본
+# ODODOK 홈페이지 v1.2
 
-## 포함된 연결
-- 무료 진단 채팅: https://pf.kakao.com/_xmunxnX/chat
-- 채널 홈: https://pf.kakao.com/_xmunxnX
-- 친구 추가: https://pf.kakao.com/_xmunxnX/friend
-- 카카오톡 QR코드 삽입 완료
-- 실제 ODODOK 홈페이지 로고 적용 완료
+## 수정 내용
+- 무료 진단 폼의 `현재 운영 중인 채널` 영역 재디자인
+- PC: 3열 카드
+- 태블릿: 2열 카드
+- 모바일: 1열 카드
+- 텍스트 줄바꿈 및 글자 잘림 문제 해결
+- 채널별 아이콘 추가
+- 체크박스를 오른쪽에 정렬
+- 선택된 항목은 오도독 그린 배경으로 표시
+- 기존 카카오톡 링크와 QR코드는 그대로 유지
 
-## GitHub Pages 배포
-기존 `dongmin1/Ododok` 저장소의 파일을 이 폴더 내용으로 모두 교체합니다.
+## 배포
+기존 GitHub 저장소의 파일을 이 폴더 내용으로 교체한 뒤 `Commit changes`를 누르세요.
 
-1. 저장소에서 `Add file` → `Upload files`
-2. 이 폴더의 파일과 `assets` 폴더를 업로드
-3. `Commit changes`
-4. 1~3분 뒤 아래 주소에서 확인
-   https://dongmin1.github.io/Ododok/
-
-## 최종 테스트
-- 첫 화면 무료 진단 버튼
-- 고민 카드 클릭
-- 신청서 제출 후 카카오톡 채널 열기
-- QR코드 스캔
-- 모바일 화면
+배포 주소:
+https://dongmin1.github.io/Ododok/
