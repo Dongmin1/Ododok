@@ -1,19 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <!-- ODODOK v1.2: channel selector layout fix -->
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ODODOK — 무료 마케팅 기본 진단</title>
-  <meta name="description" content="광고보다 먼저 현재 상황과 우선순위를 확인합니다. 소상공인을 위한 오도독 무료 마케팅 기본 진단.">
-  <meta name="theme-color" content="#ffffff">
-  <meta property="og:title" content="ODODOK — 무료 마케팅 기본 진단">
-  <meta property="og:description" content="필요하지 않은 것은 권하지 않습니다. 지금 가장 필요한 순서부터 함께 찾습니다.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dongmin1.github.io/Ododok/">
-  <link rel="canonical" href="https://dongmin1.github.io/Ododok/">
-  <link rel="icon" href="assets/ododok-logo.png" type="image/svg+xml">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>ODODOK — 무료 마케팅 기본 진단</title>
+<meta content="광고보다 먼저 현재 상황과 우선순위를 확인합니다. 소상공인을 위한 오도독 무료 마케팅 기본 진단." name="description"/>
+<meta content="#ffffff" name="theme-color"/>
+<meta content="ODODOK — 무료 마케팅 기본 진단" property="og:title"/>
+<meta content="필요하지 않은 것은 권하지 않습니다. 지금 가장 필요한 순서부터 함께 찾습니다." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://dongmin1.github.io/Ododok/" property="og:url"/>
+<link href="https://dongmin1.github.io/Ododok/" rel="canonical"/>
+<link href="assets/ododok-logo.png" rel="icon" type="image/svg+xml"/>
+<style>
     :root{--ink:#101311;--muted:#68706c;--line:#e5e8e6;--soft:#f5f7f5;--green:#215f43;--green2:#eaf4ee;--max:1180px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;letter-spacing:-.025em;line-height:1.55;-webkit-font-smoothing:antialiased}button,input,textarea,select{font:inherit}button,a{color:inherit}a{text-decoration:none}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
     header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(229,232,230,.86)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.brand img{display:block;width:220px}.links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:750}.primary,.navbtn{border:0;border-radius:999px;background:var(--ink);color:#fff;padding:14px 20px;font-weight:850;cursor:pointer;transition:.2s}.primary:hover,.navbtn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(16,19,17,.15)}
@@ -50,163 +51,158 @@
     @media(max-width:900px){.hero-grid,.kakao-grid{grid-template-columns:1fr}.qr-card{justify-self:start}.checks{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-card{max-width:650px}.links a{display:none}.problem-grid{grid-template-columns:1fr 1fr}.report-grid{grid-template-columns:1fr 1fr}.section-head{display:block}.desc{margin-top:18px}}
     @media(max-width:620px){.wrap{width:min(calc(100% - 24px),var(--max))}.checks{grid-template-columns:1fr}.check-item{min-height:58px;padding:12px 14px}.channel-name{font-size:15px;white-space:normal;overflow:visible;text-overflow:clip}.nav{height:66px}.brand img{width:180px}.navbtn{font-size:12px;padding:10px 13px}.hero{min-height:auto;padding:68px 0}.hero-grid{gap:32px}h1{font-size:47px}.lead{font-size:18px}.quick-card{padding:20px}section{padding:76px 0}.problem-grid,.report-grid,.principles,.form-grid,.checks{grid-template-columns:1fr}.field-group.full{grid-column:auto}.problem,.report-card{min-height:auto}.form-body{padding:23px 18px}.form-title{font-size:26px}.foot{align-items:flex-start;flex-direction:column}}
   </style>
-</head>
+<style>
+.floating-kakao{position:fixed;right:24px;bottom:24px;min-width:150px;height:54px;padding:0 18px;border-radius:999px;background:#FEE500;color:#191919;display:flex;align-items:center;justify-content:center;gap:9px;font-size:15px;font-weight:850;letter-spacing:-.02em;text-decoration:none;box-shadow:0 10px 28px rgba(0,0,0,.18);z-index:9999;transition:transform .2s ease,box-shadow .2s ease}
+.floating-kakao:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(0,0,0,.22)}
+.floating-kakao svg{width:22px;height:22px;display:block;flex:0 0 auto}
+@media(max-width:620px){.floating-kakao{right:16px;bottom:16px;min-width:0;width:56px;height:56px;padding:0;border-radius:50%}.floating-kakao span{display:none}.floating-kakao svg{width:24px;height:24px}}
+</style></head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#top"><img src="assets/ododok-logo.png" alt="ODODOK 기본이 멀리 간다"></a><nav class="links"><a href="#problems">고민</a><a href="#report">진단 리포트</a><a href="#principles">원칙</a><button class="navbtn js-open">무료 진단</button></nav></div></header>
-
+<header><div class="wrap nav"><a class="brand" href="#top"><img alt="ODODOK 기본이 멀리 간다" src="assets/ododok-logo.png"/></a><nav class="links"><a href="#problems">고민</a><a href="#report">진단 리포트</a><a href="#principles">원칙</a><button class="navbtn js-open">무료 진단</button></nav></div></header>
 <main id="top">
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Free Basic Diagnosis</span>
-      <h1>무엇을 할지보다,<br>무엇을 먼저 할지.</h1>
-      <p class="lead">광고보다 먼저 현재 상황과 우선순위를 살펴봅니다. 필요하지 않은 것은 권하지 않습니다.</p>
-      <button class="primary js-open">카카오톡 무료 진단 시작하기 →</button>
-      <div class="trust"><span>무료 기본 진단</span><span>업체 확인 후 진행</span><span>진단 리포트 제공</span></div>
-    </div>
-    <aside class="quick-card" aria-label="빠른 무료 진단 신청">
-      <span class="eyebrow">바로 시작하기</span>
-      <h2>스크롤 전에 신청할 수 있습니다.</h2>
-      <p>업체명과 연락처만 먼저 입력해 주세요.</p>
-      <div class="mini-fields">
-        <input id="quickBusiness" type="text" placeholder="업체명">
-        <input id="quickContact" type="tel" placeholder="연락처">
-      </div>
-      <button class="primary" id="quickStart">무료 진단 이어서 작성하기</button>
-      <div class="small">입력 정보는 진단 및 상담 목적으로만 사용합니다.</div>
-    </aside>
-  </div>
+<div class="wrap hero-grid">
+<div>
+<span class="eyebrow">Free Basic Diagnosis</span>
+<h1>무엇을 할지보다,<br/>무엇을 먼저 할지.</h1>
+<p class="lead">광고보다 먼저 현재 상황과 우선순위를 살펴봅니다. 필요하지 않은 것은 권하지 않습니다.</p>
+<button class="primary js-open">카카오톡 무료 진단 시작하기 →</button>
+<div class="trust"><span>무료 기본 진단</span><span>업체 확인 후 진행</span><span>진단 리포트 제공</span></div>
+</div>
+<aside aria-label="빠른 무료 진단 신청" class="quick-card">
+<span class="eyebrow">바로 시작하기</span>
+<h2>스크롤 전에 신청할 수 있습니다.</h2>
+<p>업체명과 연락처만 먼저 입력해 주세요.</p>
+<div class="mini-fields">
+<input id="quickBusiness" placeholder="업체명" type="text"/>
+<input id="quickContact" placeholder="연락처" type="tel"/>
+</div>
+<button class="primary" id="quickStart">무료 진단 이어서 작성하기</button>
+<div class="small">입력 정보는 진단 및 상담 목적으로만 사용합니다.</div>
+</aside>
+</div>
 </section>
-
-<section id="problems" class="soft">
-  <div class="wrap">
-    <div class="section-head"><div><span class="eyebrow">Your Question</span><h2>이런 고민이<br>있으신가요?</h2></div><p class="desc">가장 가까운 고민을 선택하면 신청서에 자동으로 반영됩니다.</p></div>
-    <div class="problem-grid">
-      <article class="problem" data-concern="광고를 해야 할지 고민됩니다."><b>광고를 해야 할지 고민이신가요?</b><p>광고 전에 먼저 확인해야 할 부분을 살펴봅니다.</p><span class="arrow">무료 진단 →</span></article>
-      <article class="problem" data-concern="상위 노출이 되지 않습니다."><b>상위 노출이 안 되시나요?</b><p>노출이 어려운 원인과 개선 순서를 확인합니다.</p><span class="arrow">무료 진단 →</span></article>
-      <article class="problem" data-concern="광고를 하고 있지만 문의가 없습니다."><b>광고 중인데 문의가 없으신가요?</b><p>광고 이후 고객이 이탈하는 지점을 점검합니다.</p><span class="arrow">무료 진단 →</span></article>
-      <article class="problem" data-concern="마케팅을 어디서부터 시작해야 할지 모르겠습니다."><b>어디서부터 시작할지 막막하신가요?</b><p>지금 해야 할 일과 나중에 할 일을 구분합니다.</p><span class="arrow">무료 진단 →</span></article>
-      <article class="problem" data-concern="브랜드를 어떻게 알려야 할지 고민입니다."><b>브랜드를 어떻게 알려야 할까요?</b><p>채널보다 먼저 누구에게 무엇을 전할지 정리합니다.</p><span class="arrow">무료 진단 →</span></article>
-      <article class="problem" data-concern="기타 고민이 있습니다."><b>맞는 항목이 없으신가요?</b><p>어떤 고민이든 현재 상황부터 함께 정리합니다.</p><span class="arrow">직접 작성 →</span></article>
-    </div>
-  </div>
+<section class="soft" id="problems">
+<div class="wrap">
+<div class="section-head"><div><span class="eyebrow">Your Question</span><h2>이런 고민이<br/>있으신가요?</h2></div><p class="desc">가장 가까운 고민을 선택하면 신청서에 자동으로 반영됩니다.</p></div>
+<div class="problem-grid">
+<article class="problem" data-concern="광고를 해야 할지 고민됩니다."><b>광고를 해야 할지 고민이신가요?</b><p>광고 전에 먼저 확인해야 할 부분을 살펴봅니다.</p><span class="arrow">무료 진단 →</span></article>
+<article class="problem" data-concern="상위 노출이 되지 않습니다."><b>상위 노출이 안 되시나요?</b><p>노출이 어려운 원인과 개선 순서를 확인합니다.</p><span class="arrow">무료 진단 →</span></article>
+<article class="problem" data-concern="광고를 하고 있지만 문의가 없습니다."><b>광고 중인데 문의가 없으신가요?</b><p>광고 이후 고객이 이탈하는 지점을 점검합니다.</p><span class="arrow">무료 진단 →</span></article>
+<article class="problem" data-concern="마케팅을 어디서부터 시작해야 할지 모르겠습니다."><b>어디서부터 시작할지 막막하신가요?</b><p>지금 해야 할 일과 나중에 할 일을 구분합니다.</p><span class="arrow">무료 진단 →</span></article>
+<article class="problem" data-concern="브랜드를 어떻게 알려야 할지 고민입니다."><b>브랜드를 어떻게 알려야 할까요?</b><p>채널보다 먼저 누구에게 무엇을 전할지 정리합니다.</p><span class="arrow">무료 진단 →</span></article>
+<article class="problem" data-concern="기타 고민이 있습니다."><b>맞는 항목이 없으신가요?</b><p>어떤 고민이든 현재 상황부터 함께 정리합니다.</p><span class="arrow">직접 작성 →</span></article>
+</div>
+</div>
 </section>
-
-<section id="report" class="report">
-  <div class="wrap">
-    <div class="section-head"><div><span class="eyebrow">ODODOK Report</span><h2>말로 끝나지 않고,<br>기록으로 남깁니다.</h2></div><p class="desc">무료 진단 후 현재 상태와 실행 우선순위를 정리한 기본 진단 리포트를 제공합니다.</p></div>
-    <div class="report-grid">
-      <article class="report-card"><small>01 · CURRENT</small><h3>현재 상태</h3><p>운영 채널과 고객이 처음 만나는 화면을 살펴봅니다.</p></article>
-      <article class="report-card"><small>02 · STRENGTH</small><h3>잘하고 있는 점</h3><p>유지하고 더 살려야 할 강점을 먼저 정리합니다.</p></article>
-      <article class="report-card"><small>03 · PRIORITY</small><h3>우선순위</h3><p>여러 작업 중 가장 먼저 해야 할 일을 제안합니다.</p></article>
-      <article class="report-card"><small>04 · NOT NOW</small><h3>지금 안 해도 되는 것</h3><p>현재 필요하지 않은 광고와 작업도 분명히 말합니다.</p></article>
-    </div>
-    <div class="signature">“좋은 마케팅은 무엇을 많이 하는지가 아니라, 무엇을 먼저 해야 하는지부터 시작합니다.”</div>
-  </div>
+<section class="report" id="report">
+<div class="wrap">
+<div class="section-head"><div><span class="eyebrow">ODODOK Report</span><h2>말로 끝나지 않고,<br/>기록으로 남깁니다.</h2></div><p class="desc">무료 진단 후 현재 상태와 실행 우선순위를 정리한 기본 진단 리포트를 제공합니다.</p></div>
+<div class="report-grid">
+<article class="report-card"><small>01 · CURRENT</small><h3>현재 상태</h3><p>운영 채널과 고객이 처음 만나는 화면을 살펴봅니다.</p></article>
+<article class="report-card"><small>02 · STRENGTH</small><h3>잘하고 있는 점</h3><p>유지하고 더 살려야 할 강점을 먼저 정리합니다.</p></article>
+<article class="report-card"><small>03 · PRIORITY</small><h3>우선순위</h3><p>여러 작업 중 가장 먼저 해야 할 일을 제안합니다.</p></article>
+<article class="report-card"><small>04 · NOT NOW</small><h3>지금 안 해도 되는 것</h3><p>현재 필요하지 않은 광고와 작업도 분명히 말합니다.</p></article>
+</div>
+<div class="signature">“좋은 마케팅은 무엇을 많이 하는지가 아니라, 무엇을 먼저 해야 하는지부터 시작합니다.”</div>
+</div>
 </section>
-
 <section id="principles">
-  <div class="wrap">
-    <div class="section-head"><div><span class="eyebrow">Our Principles</span><h2>오도독의<br>기본 원칙</h2></div><p class="desc">무료라는 이유로 대충 보지 않습니다. 다만 확인할 수 있는 실제 업체를 우선해 진단합니다.</p></div>
-    <div class="principles">
-      <div class="principle"><strong>필요하지 않은 것은 권하지 않습니다.</strong><p>진단 결과에 따라 아무것도 제안하지 않을 수도 있습니다.</p></div>
-      <div class="principle"><strong>혼자 할 수 있는 것은 방법을 알려드립니다.</strong><p>직접 진행 가능한 일은 실행 순서까지 설명합니다.</p></div>
-      <div class="principle"><strong>업체 정보를 확인한 뒤 진단합니다.</strong><p>업체명, 연락처, 운영 채널을 바탕으로 실제 상태를 확인합니다.</p></div>
-      <div class="principle"><strong>한꺼번에 많은 일을 권하지 않습니다.</strong><p>지금 가장 중요한 한 가지부터 찾습니다.</p></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head"><div><span class="eyebrow">Our Principles</span><h2>오도독의<br/>기본 원칙</h2></div><p class="desc">무료라는 이유로 대충 보지 않습니다. 다만 확인할 수 있는 실제 업체를 우선해 진단합니다.</p></div>
+<div class="principles">
+<div class="principle"><strong>필요하지 않은 것은 권하지 않습니다.</strong><p>진단 결과에 따라 아무것도 제안하지 않을 수도 있습니다.</p></div>
+<div class="principle"><strong>혼자 할 수 있는 것은 방법을 알려드립니다.</strong><p>직접 진행 가능한 일은 실행 순서까지 설명합니다.</p></div>
+<div class="principle"><strong>업체 정보를 확인한 뒤 진단합니다.</strong><p>업체명, 연락처, 운영 채널을 바탕으로 실제 상태를 확인합니다.</p></div>
+<div class="principle"><strong>한꺼번에 많은 일을 권하지 않습니다.</strong><p>지금 가장 중요한 한 가지부터 찾습니다.</p></div>
+</div>
+</div>
 </section>
-
-
 <section class="kakao-section">
-  <div class="wrap kakao-grid">
-    <div>
-      <span class="eyebrow">Kakao Channel</span>
-      <h2>무료 진단은<br>카카오톡에서 이어집니다.</h2>
-      <p class="desc">QR코드를 스캔하거나 버튼을 눌러 오도독 채널에서 바로 상담을 시작하세요.</p>
-      <div class="kakao-actions">
-        <a class="primary" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener">카카오톡 무료 진단 시작하기 →</a>
-        <a class="secondary" href="https://pf.kakao.com/_xmunxnX/friend" target="_blank" rel="noopener">채널 친구 추가</a>
-      </div>
-    </div>
-    <div class="qr-card">
-      <img src="assets/kakao-qr.jpg" alt="ODODOK 카카오톡 채널 QR코드">
-      <strong>ODODOK 카카오톡 채널</strong>
-      <span>@ODODOK</span>
-    </div>
-  </div>
+<div class="wrap kakao-grid">
+<div>
+<span class="eyebrow">Kakao Channel</span>
+<h2>무료 진단은<br/>카카오톡에서 이어집니다.</h2>
+<p class="desc">QR코드를 스캔하거나 버튼을 눌러 오도독 채널에서 바로 상담을 시작하세요.</p>
+<div class="kakao-actions">
+<a class="primary" href="https://pf.kakao.com/_xmunxnX/chat" rel="noopener" target="_blank">카카오톡 무료 진단 시작하기 →</a>
+<a class="secondary" href="https://pf.kakao.com/_xmunxnX/friend" rel="noopener" target="_blank">채널 친구 추가</a>
+</div>
+</div>
+<div class="qr-card">
+<img alt="ODODOK 카카오톡 채널 QR코드" src="assets/kakao-qr.jpg"/>
+<strong>ODODOK 카카오톡 채널</strong>
+<span>@ODODOK</span>
+</div>
+</div>
 </section>
-
 <section class="cta">
-  <div class="wrap"><span class="eyebrow">Start from Basics</span><h2>지금 필요한 순서부터<br>함께 찾겠습니다.</h2><p>정확한 진단을 위해 업체 정보와 운영 중인 채널을 확인합니다.</p><button class="primary js-open">무료 진단 신청하기 →</button></div>
+<div class="wrap"><span class="eyebrow">Start from Basics</span><h2>지금 필요한 순서부터<br/>함께 찾겠습니다.</h2><p>정확한 진단을 위해 업체 정보와 운영 중인 채널을 확인합니다.</p><button class="primary js-open">무료 진단 신청하기 →</button></div>
 </section>
 </main>
-
-<footer><div class="wrap foot"><img src="assets/ododok-logo.png" alt="ODODOK"><div class="foot-links"><a href="https://blog.naver.com/rajkjk" target="_blank" rel="noopener">Blog</a><a href="https://pf.kakao.com/_xmunxnX" target="_blank" rel="noopener">Kakao</a><a href="#top">맨 위로</a><span>© 2026 ODODOK</span></div></div></footer>
-
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="formTitle">
-  <div class="dialog">
-    <div class="dialog-head"><img src="assets/ododok-logo.png" alt="ODODOK"><button class="close" aria-label="닫기">×</button></div>
-    <div id="formWrap" class="form-body">
-      <h2 class="form-title" id="formTitle">무료 기본 진단 신청</h2>
-      <p class="form-sub">실제 업체 확인과 정확한 진단을 위해 기본 정보를 입력해 주세요.</p>
-      <form id="diagnosisForm">
-        <div class="form-grid">
-          <div class="field-group"><label for="business">업체명 <span class="req">*</span></label><input id="business" required autocomplete="organization"></div>
-          <div class="field-group"><label for="contact">연락처 <span class="req">*</span></label><input id="contact" type="tel" required autocomplete="tel" placeholder="010-0000-0000"></div>
-          <div class="field-group"><label for="industry">업종 <span class="req">*</span></label><input id="industry" required placeholder="예: 카페, 음식점, 미용실"></div>
-          <div class="field-group"><label for="region">지역 <span class="req">*</span></label><input id="region" required placeholder="예: 경기 평택"></div>
-          <div class="field-group full"><label>현재 운영 중인 채널</label>
-            <div class="checks">
-              <label class="check-item">
-                <span class="channel-icon naver">N</span>
-                <span class="channel-name">네이버 플레이스</span>
-                <input type="checkbox" name="channels" value="네이버 플레이스">
-              </label>
-              <label class="check-item">
-                <span class="channel-icon home">⌂</span>
-                <span class="channel-name">홈페이지</span>
-                <input type="checkbox" name="channels" value="홈페이지">
-              </label>
-              <label class="check-item">
-                <span class="channel-icon blog">B</span>
-                <span class="channel-name">블로그</span>
-                <input type="checkbox" name="channels" value="블로그">
-              </label>
-              <label class="check-item">
-                <span class="channel-icon insta">◎</span>
-                <span class="channel-name">인스타그램</span>
-                <input type="checkbox" name="channels" value="인스타그램">
-              </label>
-              <label class="check-item">
-                <span class="channel-icon google">G</span>
-                <span class="channel-name">Google 비즈니스</span>
-                <input type="checkbox" name="channels" value="Google 비즈니스">
-              </label>
-              <label class="check-item">
-                <span class="channel-icon more">•••</span>
-                <span class="channel-name">기타</span>
-                <input type="checkbox" name="channels" value="기타">
-              </label>
-            </div>
-          </div>
-          <div class="field-group full"><label for="link">확인할 링크</label><input id="link" type="url" placeholder="네이버 플레이스, 홈페이지, 인스타그램 주소"></div>
-          <div class="field-group full"><label for="concern">가장 고민되는 부분 <span class="req">*</span></label><textarea id="concern" required placeholder="현재 상황과 가장 해결하고 싶은 문제를 적어주세요."></textarea></div>
-          <div class="field-group full"><label for="source">오도독을 알게 된 경로</label><select id="source"><option>네이버 검색</option><option>네이버 블로그</option><option>인스타그램</option><option>지인 소개</option><option>기타</option></select></div>
-        </div>
-        <label class="privacy"><input id="privacy" type="checkbox" required> <span>개인정보 수집 및 무료 진단을 위한 이용에 동의합니다. 입력 정보는 진단과 상담 목적으로만 사용합니다.</span></label>
-        <button class="primary submit" type="submit">신청 내용을 카카오톡으로 보내기</button>
-        <div class="notice">신청 내용을 복사한 뒤 오도독 카카오톡 채널로 바로 연결됩니다.</div>
-      </form>
-    </div>
-    <div id="success" class="success">
-      <div class="success-icon">✓</div><h3>신청 내용이 준비되었습니다.</h3>
-      <p>카카오톡 채널에서 붙여넣기만 하면 상담이 시작됩니다.</p>
-      <div class="success-actions"><button class="primary" id="openKakao">카카오톡 채널 열기</button><button class="secondary" id="copyAgain">신청 내용 다시 복사</button><button class="secondary" id="closeDone">닫기</button></div>
-    </div>
-  </div>
+<footer><div class="wrap foot"><img alt="ODODOK" src="assets/ododok-logo.png"/><div class="foot-links"><a href="https://blog.naver.com/rajkjk" rel="noopener" target="_blank">Blog</a><a href="https://pf.kakao.com/_xmunxnX" rel="noopener" target="_blank">Kakao</a><a href="#top">맨 위로</a><span>© 2026 ODODOK</span></div></div></footer>
+<div aria-labelledby="formTitle" aria-modal="true" class="modal" id="modal" role="dialog">
+<div class="dialog">
+<div class="dialog-head"><img alt="ODODOK" src="assets/ododok-logo.png"/><button aria-label="닫기" class="close">×</button></div>
+<div class="form-body" id="formWrap">
+<h2 class="form-title" id="formTitle">무료 기본 진단 신청</h2>
+<p class="form-sub">실제 업체 확인과 정확한 진단을 위해 기본 정보를 입력해 주세요.</p>
+<form id="diagnosisForm">
+<div class="form-grid">
+<div class="field-group"><label for="business">업체명 <span class="req">*</span></label><input autocomplete="organization" id="business" required=""/></div>
+<div class="field-group"><label for="contact">연락처 <span class="req">*</span></label><input autocomplete="tel" id="contact" placeholder="010-0000-0000" required="" type="tel"/></div>
+<div class="field-group"><label for="industry">업종 <span class="req">*</span></label><input id="industry" placeholder="예: 카페, 음식점, 미용실" required=""/></div>
+<div class="field-group"><label for="region">지역 <span class="req">*</span></label><input id="region" placeholder="예: 경기 평택" required=""/></div>
+<div class="field-group full"><label>현재 운영 중인 채널</label>
+<div class="checks">
+<label class="check-item">
+<span class="channel-icon naver">N</span>
+<span class="channel-name">네이버 플레이스</span>
+<input name="channels" type="checkbox" value="네이버 플레이스"/>
+</label>
+<label class="check-item">
+<span class="channel-icon home">⌂</span>
+<span class="channel-name">홈페이지</span>
+<input name="channels" type="checkbox" value="홈페이지"/>
+</label>
+<label class="check-item">
+<span class="channel-icon blog">B</span>
+<span class="channel-name">블로그</span>
+<input name="channels" type="checkbox" value="블로그"/>
+</label>
+<label class="check-item">
+<span class="channel-icon insta">◎</span>
+<span class="channel-name">인스타그램</span>
+<input name="channels" type="checkbox" value="인스타그램"/>
+</label>
+<label class="check-item">
+<span class="channel-icon google">G</span>
+<span class="channel-name">Google 비즈니스</span>
+<input name="channels" type="checkbox" value="Google 비즈니스"/>
+</label>
+<label class="check-item">
+<span class="channel-icon more">•••</span>
+<span class="channel-name">기타</span>
+<input name="channels" type="checkbox" value="기타"/>
+</label>
 </div>
-
+</div>
+<div class="field-group full"><label for="link">확인할 링크</label><input id="link" placeholder="네이버 플레이스, 홈페이지, 인스타그램 주소" type="url"/></div>
+<div class="field-group full"><label for="concern">가장 고민되는 부분 <span class="req">*</span></label><textarea id="concern" placeholder="현재 상황과 가장 해결하고 싶은 문제를 적어주세요." required=""></textarea></div>
+<div class="field-group full"><label for="source">오도독을 알게 된 경로</label><select id="source"><option>네이버 검색</option><option>네이버 블로그</option><option>인스타그램</option><option>지인 소개</option><option>기타</option></select></div>
+</div>
+<label class="privacy"><input id="privacy" required="" type="checkbox"/> <span>개인정보 수집 및 무료 진단을 위한 이용에 동의합니다. 입력 정보는 진단과 상담 목적으로만 사용합니다.</span></label>
+<button class="primary submit" type="submit">신청 내용을 카카오톡으로 보내기</button>
+<div class="notice">신청 내용을 복사한 뒤 오도독 카카오톡 채널로 바로 연결됩니다.</div>
+</form>
+</div>
+<div class="success" id="success">
+<div class="success-icon">✓</div><h3>신청 내용이 준비되었습니다.</h3>
+<p>카카오톡 채널에서 붙여넣기만 하면 상담이 시작됩니다.</p>
+<div class="success-actions"><button class="primary" id="openKakao">카카오톡 채널 열기</button><button class="secondary" id="copyAgain">신청 내용 다시 복사</button><button class="secondary" id="closeDone">닫기</button></div>
+</div>
+</div>
+</div>
 <script>
 const KAKAO_CHANNEL_URL = "https://pf.kakao.com/_xmunxnX/chat";
 const modal=document.getElementById("modal"), formWrap=document.getElementById("formWrap"), success=document.getElementById("success");
@@ -260,5 +256,8 @@ document.getElementById("openKakao").addEventListener("click",()=>{
 document.getElementById("copyAgain").addEventListener("click",async()=>{await copyText(finalMessage);alert("신청 내용을 다시 복사했습니다.")});
 document.getElementById("closeDone").addEventListener("click",closeModal);
 </script>
-</body>
+<a class="floating-kakao" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener" aria-label="카카오톡으로 문의하기">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.58 2 11c0 2.86 1.88 5.37 4.7 6.78L5.8 21l3.77-2.15c.79.1 1.6.15 2.43.15 5.52 0 10-3.58 10-8S17.52 3 12 3Z"/></svg>
+<span>카카오톡 문의</span>
+</a></body>
 </html>
