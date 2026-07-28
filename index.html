@@ -1,263 +1,243 @@
-<!DOCTYPE html>
-
-<!-- ODODOK v1.2: channel selector layout fix -->
+<!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>ODODOK — 무료 마케팅 기본 진단</title>
-<meta content="광고보다 먼저 현재 상황과 우선순위를 확인합니다. 소상공인을 위한 오도독 무료 마케팅 기본 진단." name="description"/>
-<meta content="#ffffff" name="theme-color"/>
-<meta content="ODODOK — 무료 마케팅 기본 진단" property="og:title"/>
-<meta content="필요하지 않은 것은 권하지 않습니다. 지금 가장 필요한 순서부터 함께 찾습니다." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://dongmin1.github.io/Ododok/" property="og:url"/>
-<link href="https://dongmin1.github.io/Ododok/" rel="canonical"/>
-<link href="assets/ododok-logo.png" rel="icon" type="image/svg+xml"/>
-<style>
-    :root{--ink:#101311;--muted:#68706c;--line:#e5e8e6;--soft:#f5f7f5;--green:#215f43;--green2:#eaf4ee;--max:1180px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;letter-spacing:-.025em;line-height:1.55;-webkit-font-smoothing:antialiased}button,input,textarea,select{font:inherit}button,a{color:inherit}a{text-decoration:none}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
-    header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(229,232,230,.86)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.brand img{display:block;width:220px}.links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:750}.primary,.navbtn{border:0;border-radius:999px;background:var(--ink);color:#fff;padding:14px 20px;font-weight:850;cursor:pointer;transition:.2s}.primary:hover,.navbtn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(16,19,17,.15)}
-    .hero{min-height:calc(100vh - 74px);display:grid;align-items:center;padding:58px 0 52px}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:58px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--green);font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}h1{font-size:clamp(48px,6.5vw,84px);line-height:1.03;letter-spacing:-.07em;margin:22px 0 24px}.lead{font-size:clamp(19px,2vw,24px);color:var(--muted);max-width:670px;margin:0 0 28px}.trust{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:22px;color:#5e6762;font-size:13px;font-weight:800}.trust span:before{content:"✓";color:var(--green);margin-right:7px}
-    .quick-card{padding:27px;border:1px solid var(--line);border-radius:28px;background:var(--soft);box-shadow:0 24px 70px rgba(16,19,17,.07)}.quick-card h2{font-size:27px;margin:8px 0 8px;letter-spacing:-.045em}.quick-card p{margin:0 0 18px;color:var(--muted)}.mini-fields{display:grid;gap:10px}.mini-fields input{width:100%;padding:15px 16px;border:1px solid var(--line);background:#fff;border-radius:14px;outline:none}.mini-fields input:focus{border-color:var(--green)}.quick-card .primary{width:100%;margin-top:12px}.small{font-size:12px;color:#858d89;margin-top:12px}
-    section{padding:104px 0}.soft{background:var(--soft)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:42px}.section-head h2{font-size:clamp(36px,5vw,63px);line-height:1.08;letter-spacing:-.06em;margin:12px 0 0}.desc{max-width:470px;color:var(--muted);font-size:17px}.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.problem{padding:25px;border:1px solid var(--line);border-radius:22px;background:#fff;min-height:185px;cursor:pointer;transition:.2s}.problem:hover{transform:translateY(-4px);border-color:#cbd4cf;box-shadow:0 18px 45px rgba(16,19,17,.07)}.problem b{display:block;font-size:20px;line-height:1.3;margin-bottom:12px}.problem p{color:var(--muted);margin:0}.problem .arrow{display:block;margin-top:22px;color:var(--green);font-weight:900}
-    .report{background:#111512;color:#fff}.report .desc{color:#acb5b0}.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.report-card{padding:27px;border:1px solid #2b312e;border-radius:22px;background:#171c19;min-height:220px}.report-card small{color:#8fd1aa;font-weight:900;letter-spacing:.12em}.report-card h3{font-size:23px;margin:40px 0 10px}.report-card p{margin:0;color:#aeb6b1}.signature{margin-top:28px;padding:20px 22px;border-left:3px solid #8fd1aa;background:#151a17;color:#dfe5e1;font-size:18px}
-    .principles{display:grid;grid-template-columns:1fr 1fr;gap:14px}.principle{padding:25px;border-top:1px solid var(--line)}.principle strong{font-size:20px}.principle p{color:var(--muted);margin:8px 0 0}
-    .cta{text-align:center;background:linear-gradient(#fff,#f2f5f3)}.cta h2{font-size:clamp(39px,5vw,66px);line-height:1.08;letter-spacing:-.06em;margin:14px 0}.cta p{color:var(--muted);font-size:18px}.cta .primary{margin-top:12px;padding:17px 27px}
-    footer{padding:32px 0;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--muted);font-size:13px}.foot img{width:190px}.foot-links{display:flex;gap:16px}
-    .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(10,12,11,.6);backdrop-filter:blur(8px)}.modal.open{display:flex}.dialog{width:min(760px,100%);max-height:94vh;overflow:auto;background:#fff;border-radius:28px;box-shadow:0 30px 100px rgba(0,0,0,.3)}.dialog-head{display:flex;justify-content:space-between;align-items:center;padding:20px 25px;border-bottom:1px solid var(--line)}.dialog-head img{width:190px}.close{width:40px;height:40px;border:0;border-radius:50%;background:#eff2f0;font-size:23px;cursor:pointer}.form-body{padding:28px}.form-title{font-size:30px;margin:0 0 7px}.form-sub{margin:0 0 25px;color:var(--muted)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field-group{display:grid;gap:7px}.field-group.full{grid-column:1/-1}.field-group label{font-size:13px;font-weight:850}.req{color:#c44848}.field-group input,.field-group select,.field-group textarea{width:100%;padding:15px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;outline:none}.field-group textarea{min-height:110px;resize:vertical}.field-group input:focus,.field-group select:focus,.field-group textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(33,95,67,.08)}.checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-    .check-item{display:grid;grid-template-columns:34px minmax(0,1fr) 22px;gap:10px;align-items:center;min-height:64px;padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer;transition:.18s}
-    .check-item:hover{border-color:#c9d2cd;background:#fafcfb}
-    .check-item:has(input:checked){border-color:var(--green);background:var(--green2);box-shadow:0 0 0 2px rgba(33,95,67,.08)}
-    .check-item input{width:18px;height:18px;margin:0;justify-self:end;accent-color:var(--green)}
-    .channel-name{min-width:0;font-size:14px;font-weight:800;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .channel-icon{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:14px;font-weight:900;letter-spacing:-.04em}
-    .channel-icon.naver,.channel-icon.blog{background:#20c763;color:#fff}
-    .channel-icon.home{background:#eaf2ff;color:#3478e5;font-size:22px}
-    .channel-icon.insta{background:linear-gradient(135deg,#ffcb52,#f44f64 55%,#884de8);color:#fff;font-size:20px}
-    .channel-icon.google{background:#fff;border:1px solid var(--line);color:#4285f4;font-size:17px}
-    .channel-icon.more{background:#f1f3f2;color:#626965;font-size:12px;letter-spacing:0}.privacy{display:flex;align-items:flex-start;gap:9px;margin:19px 0;font-size:13px;color:var(--muted)}.submit{width:100%;padding:17px}.notice{padding:13px 15px;background:var(--green2);border-radius:13px;color:#335e49;font-size:13px;margin-top:13px}.success{display:none;text-align:center;padding:45px 20px}.success.show{display:block}.success-icon{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;background:var(--green2);color:var(--green);font-size:30px;font-weight:900}.success h3{font-size:30px;margin:0 0 10px}.success p{color:var(--muted)}.success-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}.secondary{border:1px solid var(--line);border-radius:999px;background:#fff;padding:13px 18px;font-weight:850;cursor:pointer}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오도독 | 기본이 멀리 갑니다.</title>
+  <meta name="description" content="오도독은 광고부터 권하지 않습니다. 검색, 홈페이지, 브랜드 문구의 현재 상태부터 무료로 함께 살핍니다.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://dongmin1.github.io/Ododok/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
 
-    .brand img,.dialog-head img,.foot img{height:auto;object-fit:contain}
-    .kakao-section{padding:104px 0;background:#fff}
-    .kakao-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
-    .kakao-grid h2{font-size:clamp(38px,5vw,62px);line-height:1.08;letter-spacing:-.06em;margin:14px 0 18px}
-    .kakao-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-    .qr-card{justify-self:end;width:min(100%,380px);padding:24px;border:1px solid var(--line);border-radius:28px;background:var(--soft);text-align:center;box-shadow:0 20px 60px rgba(16,19,17,.07)}
-    .qr-card img{display:block;width:100%;border-radius:20px;background:#fff}
-    .qr-card strong{display:block;font-size:19px;margin-top:16px}
-    .qr-card span{display:block;color:var(--muted);font-size:13px;margin-top:3px}
-
-    @media(max-width:900px){.hero-grid,.kakao-grid{grid-template-columns:1fr}.qr-card{justify-self:start}.checks{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-card{max-width:650px}.links a{display:none}.problem-grid{grid-template-columns:1fr 1fr}.report-grid{grid-template-columns:1fr 1fr}.section-head{display:block}.desc{margin-top:18px}}
-    @media(max-width:620px){.wrap{width:min(calc(100% - 24px),var(--max))}.checks{grid-template-columns:1fr}.check-item{min-height:58px;padding:12px 14px}.channel-name{font-size:15px;white-space:normal;overflow:visible;text-overflow:clip}.nav{height:66px}.brand img{width:180px}.navbtn{font-size:12px;padding:10px 13px}.hero{min-height:auto;padding:68px 0}.hero-grid{gap:32px}h1{font-size:47px}.lead{font-size:18px}.quick-card{padding:20px}section{padding:76px 0}.problem-grid,.report-grid,.principles,.form-grid,.checks{grid-template-columns:1fr}.field-group.full{grid-column:auto}.problem,.report-card{min-height:auto}.form-body{padding:23px 18px}.form-title{font-size:26px}.foot{align-items:flex-start;flex-direction:column}}
-  </style>
-<style>
-.floating-kakao{position:fixed;right:24px;bottom:24px;min-width:150px;height:54px;padding:0 18px;border-radius:999px;background:#FEE500;color:#191919;display:flex;align-items:center;justify-content:center;gap:9px;font-size:15px;font-weight:850;letter-spacing:-.02em;text-decoration:none;box-shadow:0 10px 28px rgba(0,0,0,.18);z-index:9999;transition:transform .2s ease,box-shadow .2s ease}
-.floating-kakao:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(0,0,0,.22)}
-.floating-kakao svg{width:22px;height:22px;display:block;flex:0 0 auto}
-@media(max-width:620px){.floating-kakao{right:16px;bottom:16px;min-width:0;width:56px;height:56px;padding:0;border-radius:50%}.floating-kakao span{display:none}.floating-kakao svg{width:24px;height:24px}}
-</style></head>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="오도독 | 기본이 멀리 갑니다.">
+  <meta property="og:description" content="광고보다 먼저, 기본부터 봅니다.">
+  <meta property="og:url" content="https://dongmin1.github.io/Ododok/">
+  <meta property="og:image" content="https://dongmin1.github.io/Ododok/assets/og-image.svg">
+</head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#top"><img alt="ODODOK 기본이 멀리 간다" src="assets/ododok-logo.png"/></a><nav class="links"><a href="#problems">고민</a><a href="#report">진단 리포트</a><a href="#principles">원칙</a><button class="navbtn js-open">무료 진단</button></nav></div></header>
-<main id="top">
-<section class="hero">
-<div class="wrap hero-grid">
-<div>
-<span class="eyebrow">Free Basic Diagnosis</span>
-<h1>무엇을 할지보다,<br/>무엇을 먼저 할지.</h1>
-<p class="lead">광고보다 먼저 현재 상황과 우선순위를 살펴봅니다. 필요하지 않은 것은 권하지 않습니다.</p>
-<button class="primary js-open">카카오톡 무료 진단 시작하기 →</button>
-<div class="trust"><span>무료 기본 진단</span><span>업체 확인 후 진행</span><span>진단 리포트 제공</span></div>
-</div>
-<aside aria-label="빠른 무료 진단 신청" class="quick-card">
-<span class="eyebrow">바로 시작하기</span>
-<h2>스크롤 전에 신청할 수 있습니다.</h2>
-<p>업체명과 연락처만 먼저 입력해 주세요.</p>
-<div class="mini-fields">
-<input id="quickBusiness" placeholder="업체명" type="text"/>
-<input id="quickContact" placeholder="연락처" type="tel"/>
-</div>
-<button class="primary" id="quickStart">무료 진단 이어서 작성하기</button>
-<div class="small">입력 정보는 진단 및 상담 목적으로만 사용합니다.</div>
-</aside>
-</div>
-</section>
-<section class="soft" id="problems">
-<div class="wrap">
-<div class="section-head"><div><span class="eyebrow">Your Question</span><h2>이런 고민이<br/>있으신가요?</h2></div><p class="desc">가장 가까운 고민을 선택하면 신청서에 자동으로 반영됩니다.</p></div>
-<div class="problem-grid">
-<article class="problem" data-concern="광고를 해야 할지 고민됩니다."><b>광고를 해야 할지 고민이신가요?</b><p>광고 전에 먼저 확인해야 할 부분을 살펴봅니다.</p><span class="arrow">무료 진단 →</span></article>
-<article class="problem" data-concern="상위 노출이 되지 않습니다."><b>상위 노출이 안 되시나요?</b><p>노출이 어려운 원인과 개선 순서를 확인합니다.</p><span class="arrow">무료 진단 →</span></article>
-<article class="problem" data-concern="광고를 하고 있지만 문의가 없습니다."><b>광고 중인데 문의가 없으신가요?</b><p>광고 이후 고객이 이탈하는 지점을 점검합니다.</p><span class="arrow">무료 진단 →</span></article>
-<article class="problem" data-concern="마케팅을 어디서부터 시작해야 할지 모르겠습니다."><b>어디서부터 시작할지 막막하신가요?</b><p>지금 해야 할 일과 나중에 할 일을 구분합니다.</p><span class="arrow">무료 진단 →</span></article>
-<article class="problem" data-concern="브랜드를 어떻게 알려야 할지 고민입니다."><b>브랜드를 어떻게 알려야 할까요?</b><p>채널보다 먼저 누구에게 무엇을 전할지 정리합니다.</p><span class="arrow">무료 진단 →</span></article>
-<article class="problem" data-concern="기타 고민이 있습니다."><b>맞는 항목이 없으신가요?</b><p>어떤 고민이든 현재 상황부터 함께 정리합니다.</p><span class="arrow">직접 작성 →</span></article>
-</div>
-</div>
-</section>
-<section class="report" id="report">
-<div class="wrap">
-<div class="section-head"><div><span class="eyebrow">ODODOK Report</span><h2>말로 끝나지 않고,<br/>기록으로 남깁니다.</h2></div><p class="desc">무료 진단 후 현재 상태와 실행 우선순위를 정리한 기본 진단 리포트를 제공합니다.</p></div>
-<div class="report-grid">
-<article class="report-card"><small>01 · CURRENT</small><h3>현재 상태</h3><p>운영 채널과 고객이 처음 만나는 화면을 살펴봅니다.</p></article>
-<article class="report-card"><small>02 · STRENGTH</small><h3>잘하고 있는 점</h3><p>유지하고 더 살려야 할 강점을 먼저 정리합니다.</p></article>
-<article class="report-card"><small>03 · PRIORITY</small><h3>우선순위</h3><p>여러 작업 중 가장 먼저 해야 할 일을 제안합니다.</p></article>
-<article class="report-card"><small>04 · NOT NOW</small><h3>지금 안 해도 되는 것</h3><p>현재 필요하지 않은 광고와 작업도 분명히 말합니다.</p></article>
-</div>
-<div class="signature">“좋은 마케팅은 무엇을 많이 하는지가 아니라, 무엇을 먼저 해야 하는지부터 시작합니다.”</div>
-</div>
-</section>
-<section id="principles">
-<div class="wrap">
-<div class="section-head"><div><span class="eyebrow">Our Principles</span><h2>오도독의<br/>기본 원칙</h2></div><p class="desc">무료라는 이유로 대충 보지 않습니다. 다만 확인할 수 있는 실제 업체를 우선해 진단합니다.</p></div>
-<div class="principles">
-<div class="principle"><strong>필요하지 않은 것은 권하지 않습니다.</strong><p>진단 결과에 따라 아무것도 제안하지 않을 수도 있습니다.</p></div>
-<div class="principle"><strong>혼자 할 수 있는 것은 방법을 알려드립니다.</strong><p>직접 진행 가능한 일은 실행 순서까지 설명합니다.</p></div>
-<div class="principle"><strong>업체 정보를 확인한 뒤 진단합니다.</strong><p>업체명, 연락처, 운영 채널을 바탕으로 실제 상태를 확인합니다.</p></div>
-<div class="principle"><strong>한꺼번에 많은 일을 권하지 않습니다.</strong><p>지금 가장 중요한 한 가지부터 찾습니다.</p></div>
-</div>
-</div>
-</section>
-<section class="kakao-section">
-<div class="wrap kakao-grid">
-<div>
-<span class="eyebrow">Kakao Channel</span>
-<h2>무료 진단은<br/>카카오톡에서 이어집니다.</h2>
-<p class="desc">QR코드를 스캔하거나 버튼을 눌러 오도독 채널에서 바로 상담을 시작하세요.</p>
-<div class="kakao-actions">
-<a class="primary" href="https://pf.kakao.com/_xmunxnX/chat" rel="noopener" target="_blank">카카오톡 무료 진단 시작하기 →</a>
-<a class="secondary" href="https://pf.kakao.com/_xmunxnX/friend" rel="noopener" target="_blank">채널 친구 추가</a>
-</div>
-</div>
-<div class="qr-card">
-<img alt="ODODOK 카카오톡 채널 QR코드" src="assets/kakao-qr.jpg"/>
-<strong>ODODOK 카카오톡 채널</strong>
-<span>@ODODOK</span>
-</div>
-</div>
-</section>
-<section class="cta">
-<div class="wrap"><span class="eyebrow">Start from Basics</span><h2>지금 필요한 순서부터<br/>함께 찾겠습니다.</h2><p>정확한 진단을 위해 업체 정보와 운영 중인 채널을 확인합니다.</p><button class="primary js-open">무료 진단 신청하기 →</button></div>
-</section>
-</main>
-<footer><div class="wrap foot"><img alt="ODODOK" src="assets/ododok-logo.png"/><div class="foot-links"><a href="https://blog.naver.com/rajkjk" rel="noopener" target="_blank">Blog</a><a href="https://pf.kakao.com/_xmunxnX" rel="noopener" target="_blank">Kakao</a><a href="#top">맨 위로</a><span>© 2026 ODODOK</span></div></div></footer>
-<div aria-labelledby="formTitle" aria-modal="true" class="modal" id="modal" role="dialog">
-<div class="dialog">
-<div class="dialog-head"><img alt="ODODOK" src="assets/ododok-logo.png"/><button aria-label="닫기" class="close">×</button></div>
-<div class="form-body" id="formWrap">
-<h2 class="form-title" id="formTitle">무료 기본 진단 신청</h2>
-<p class="form-sub">실제 업체 확인과 정확한 진단을 위해 기본 정보를 입력해 주세요.</p>
-<form id="diagnosisForm">
-<div class="form-grid">
-<div class="field-group"><label for="business">업체명 <span class="req">*</span></label><input autocomplete="organization" id="business" required=""/></div>
-<div class="field-group"><label for="contact">연락처 <span class="req">*</span></label><input autocomplete="tel" id="contact" placeholder="010-0000-0000" required="" type="tel"/></div>
-<div class="field-group"><label for="industry">업종 <span class="req">*</span></label><input id="industry" placeholder="예: 카페, 음식점, 미용실" required=""/></div>
-<div class="field-group"><label for="region">지역 <span class="req">*</span></label><input id="region" placeholder="예: 경기 평택" required=""/></div>
-<div class="field-group full"><label>현재 운영 중인 채널</label>
-<div class="checks">
-<label class="check-item">
-<span class="channel-icon naver">N</span>
-<span class="channel-name">네이버 플레이스</span>
-<input name="channels" type="checkbox" value="네이버 플레이스"/>
-</label>
-<label class="check-item">
-<span class="channel-icon home">⌂</span>
-<span class="channel-name">홈페이지</span>
-<input name="channels" type="checkbox" value="홈페이지"/>
-</label>
-<label class="check-item">
-<span class="channel-icon blog">B</span>
-<span class="channel-name">블로그</span>
-<input name="channels" type="checkbox" value="블로그"/>
-</label>
-<label class="check-item">
-<span class="channel-icon insta">◎</span>
-<span class="channel-name">인스타그램</span>
-<input name="channels" type="checkbox" value="인스타그램"/>
-</label>
-<label class="check-item">
-<span class="channel-icon google">G</span>
-<span class="channel-name">Google 비즈니스</span>
-<input name="channels" type="checkbox" value="Google 비즈니스"/>
-</label>
-<label class="check-item">
-<span class="channel-icon more">•••</span>
-<span class="channel-name">기타</span>
-<input name="channels" type="checkbox" value="기타"/>
-</label>
-</div>
-</div>
-<div class="field-group full"><label for="link">확인할 링크</label><input id="link" placeholder="네이버 플레이스, 홈페이지, 인스타그램 주소" type="url"/></div>
-<div class="field-group full"><label for="concern">가장 고민되는 부분 <span class="req">*</span></label><textarea id="concern" placeholder="현재 상황과 가장 해결하고 싶은 문제를 적어주세요." required=""></textarea></div>
-<div class="field-group full"><label for="source">오도독을 알게 된 경로</label><select id="source"><option>네이버 검색</option><option>네이버 블로그</option><option>인스타그램</option><option>지인 소개</option><option>기타</option></select></div>
-</div>
-<label class="privacy"><input id="privacy" required="" type="checkbox"/> <span>개인정보 수집 및 무료 진단을 위한 이용에 동의합니다. 입력 정보는 진단과 상담 목적으로만 사용합니다.</span></label>
-<button class="primary submit" type="submit">신청 내용을 카카오톡으로 보내기</button>
-<div class="notice">신청 내용을 복사한 뒤 오도독 카카오톡 채널로 바로 연결됩니다.</div>
-</form>
-</div>
-<div class="success" id="success">
-<div class="success-icon">✓</div><h3>신청 내용이 준비되었습니다.</h3>
-<p>카카오톡 채널에서 붙여넣기만 하면 상담이 시작됩니다.</p>
-<div class="success-actions"><button class="primary" id="openKakao">카카오톡 채널 열기</button><button class="secondary" id="copyAgain">신청 내용 다시 복사</button><button class="secondary" id="closeDone">닫기</button></div>
-</div>
-</div>
-</div>
-<script>
-const KAKAO_CHANNEL_URL = "https://pf.kakao.com/_xmunxnX/chat";
-const modal=document.getElementById("modal"), formWrap=document.getElementById("formWrap"), success=document.getElementById("success");
-let finalMessage="";
-function openModal(){modal.classList.add("open");document.body.style.overflow="hidden";formWrap.style.display="block";success.classList.remove("show")}
-function closeModal(){modal.classList.remove("open");document.body.style.overflow=""}
-document.querySelectorAll(".js-open").forEach(b=>b.addEventListener("click",openModal));
-document.querySelector(".close").addEventListener("click",closeModal);
-modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
-document.getElementById("quickStart").addEventListener("click",()=>{
-  document.getElementById("business").value=document.getElementById("quickBusiness").value.trim();
-  document.getElementById("contact").value=document.getElementById("quickContact").value.trim();
-  openModal();
-});
-document.querySelectorAll(".problem").forEach(card=>card.addEventListener("click",()=>{
-  document.getElementById("concern").value=card.dataset.concern;
-  openModal();
-}));
-function makeMessage(){
-  const channels=[...document.querySelectorAll('input[name="channels"]:checked')].map(x=>x.value).join(", ")||"없음/미입력";
-  return `[ODODOK 무료 기본 진단 신청]
-업체명: ${document.getElementById("business").value.trim()}
-연락처: ${document.getElementById("contact").value.trim()}
-업종: ${document.getElementById("industry").value.trim()}
-지역: ${document.getElementById("region").value.trim()}
-운영 채널: ${channels}
-확인 링크: ${document.getElementById("link").value.trim()||"미입력"}
-고민 내용: ${document.getElementById("concern").value.trim()}
-유입 경로: ${document.getElementById("source").value}`;
-}
-async function copyText(text){
-  try{await navigator.clipboard.writeText(text);return true}
-  catch(e){
-    const ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();return true;
-  }
-}
-document.getElementById("diagnosisForm").addEventListener("submit",async e=>{
-  e.preventDefault();
-  finalMessage=makeMessage();
-  await copyText(finalMessage);
-  formWrap.style.display="none";success.classList.add("show");
-});
-document.getElementById("openKakao").addEventListener("click",()=>{
-  if(KAKAO_CHANNEL_URL.includes("YOUR_CHANNEL_ID")){
-    alert("아직 카카오톡 채널 주소가 연결되지 않았습니다. 신청 내용은 복사되었습니다.");
-    return;
-  }
-  window.open(KAKAO_CHANNEL_URL,"_blank","noopener");
-});
-document.getElementById("copyAgain").addEventListener("click",async()=>{await copyText(finalMessage);alert("신청 내용을 다시 복사했습니다.")});
-document.getElementById("closeDone").addEventListener("click",closeModal);
-</script>
-<a class="floating-kakao" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener" aria-label="카카오톡으로 문의하기">
-<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.58 2 11c0 2.86 1.88 5.37 4.7 6.78L5.8 21l3.77-2.15c.79.1 1.6.15 2.43.15 5.52 0 10-3.58 10-8S17.52 3 12 3Z"/></svg>
-<span>카카오톡 문의</span>
-</a></body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="오도독 홈">
+        <img src="assets/ododok-logo-transparent.png" alt="ODODOK 오도독">
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="주요 메뉴">
+        <a href="#about">ABOUT</a>
+        <a href="#diagnosis">DIAGNOSIS</a>
+        <a href="#project">PROJECTS</a>
+        <a href="#lab">LAB</a>
+        <a href="#journal">BLOG</a>
+      </nav>
+
+      <a class="header-cta" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer">
+        카카오톡으로 문의하기 <span>↗</span>
+      </a>
+
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false">MENU</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <h1>기본이<br>멀리 갑니다.</h1>
+          <h2>그래서 우리는,<br>광고비부터 쓰라고 하지 않습니다.</h2>
+          <div class="short-line"></div>
+          <p>
+            검색에 나오고,<br>
+            홈페이지가 제 몫을 하고,<br>
+            대표님이 스스로 이어갈 수 있게.
+          </p>
+          <div class="hero-actions">
+            <a class="button black" href="#diagnosis">
+              무료 기본진단 <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <img src="assets/hero-sprout-approved.webp" alt="단단한 기반 위에서 자라는 새싹">
+        </div>
+      </div>
+
+      <div class="service-strip">
+        <div class="container service-strip-grid">
+          <article><span class="icon">⌕</span><div><strong>검색에 나오게</strong><small>SEO · 검색 노출</small></div></article>
+          <article><span class="icon">▣</span><div><strong>홈페이지가 제 몫을 하게</strong><small>제작 · 개선</small></div></article>
+          <article><span class="icon">✎</span><div><strong>문구가 통하게</strong><small>브랜드 문구 · 콘텐츠</small></div></article>
+          <article><span class="icon">♧</span><div><strong>직접 굴릴 수 있게</strong><small>마케팅 세팅 · 교육</small></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section brand-intro" id="about">
+      <div class="container split-intro">
+        <div class="intro-title reveal">
+          <h2>우리는<br>마케팅 회사입니다.</h2>
+          <h3>그런데<br>광고부터 권하지 않습니다.</h3>
+        </div>
+        <div class="intro-copy reveal">
+          <p>
+            검색해도 안 나오고,<br>
+            홈페이지는 조용하고,<br>
+            소개글은 뭘 파는지 안 읽히는데
+          </p>
+          <p>
+            여기서 광고비만 늘리는 건,<br>
+            밑 빠진 독이니까요.
+          </p>
+          <strong>그 독부터 막습니다.<br>그게 오도독입니다.</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section philosophy">
+      <div class="container">
+        <span class="section-kicker reveal">OUR BELIEF</span>
+        <h2 class="display-title reveal">반짝하고 사라지는 건,<br>우리 일이 아닙니다.</h2>
+        <div class="belief-grid">
+          <article class="belief-card reveal">
+            <small>광고</small>
+            <h3>멈추면<br>사라집니다.</h3>
+          </article>
+          <article class="belief-card dark reveal">
+            <small>기본</small>
+            <h3>멈춰도<br>계속 일합니다.</h3>
+            <p>검색은 남고,<br>홈페이지는 일하고,<br>콘텐츠는 쌓입니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section diagnosis" id="diagnosis">
+      <div class="container diagnosis-grid">
+        <div class="diagnosis-title reveal">
+          <h2>그래서,<br>지금 상태부터 봅니다.<br>무료로요.</h2>
+        </div>
+
+        <div class="diagnosis-checks reveal">
+          <p><span>✓</span>검색하면 우리 브랜드가 나오는가</p>
+          <p><span>✓</span>홈페이지에서 고객이 바로 문의할 수 있는가</p>
+          <p><span>✓</span>소개글이 3초 안에 무엇을 하는지 전달하는가</p>
+        </div>
+
+        <div class="diagnosis-action reveal">
+          <p>팔려고 보는 게 아닙니다.<br>정말 필요한 게 무엇인지부터 같이 확인하려는 겁니다.</p>
+          <p>복잡한 상담폼도, 긴 서류도 없습니다.<br>카카오톡으로 편하게 시작하세요.</p>
+          <a class="button black wide" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer">
+            카카오톡으로 진단 시작하기 <span>↗</span>
+          </a>
+          <small>무료 · 간편 · 긴 서류 없음</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-difference">
+      <div class="container dual-grid">
+        <div class="process reveal">
+          <h2>이렇게 진행됩니다</h2>
+          <ol class="process-list">
+            <li><span>01</span><strong>만남</strong><p>검색으로 오도독을 처음 만납니다.</p></li>
+            <li><span>02</span><strong>신뢰</strong><p>광고가 아니라 기본을 말하는 곳을 봅니다.</p></li>
+            <li><span>03</span><strong>진단</strong><p>지금 상태를 무료로 짚어봅니다.</p></li>
+            <li><span>04</span><strong>대화</strong><p>카카오톡으로 편하게 이야기합니다.</p></li>
+            <li><span>05</span><strong>세팅</strong><p>검색·홈페이지·문구를 제대로 세웁니다.</p></li>
+            <li><span>06</span><strong>자립</strong><p>직접 이어갈 수 있게 방법까지 남깁니다.</p></li>
+          </ol>
+        </div>
+
+        <div class="difference reveal">
+          <h2>오도독이 다른 점</h2>
+          <div class="difference-grid">
+            <article><span>◇</span><h3>광고보다 기본</h3><p>광고비를 늘리기 전에, 새는 곳부터 막습니다.</p></article>
+            <article><span>⌁</span><h3>우리 없이도 굴러가게</h3><p>목표는 대표님의 자립입니다. 하는 법을 남깁니다.</p></article>
+            <article><span>♡</span><h3>오래 남는 것</h3><p>계속 일하는 검색 노출과 콘텐츠를 남깁니다.</p></article>
+          </div>
+        </div>
+      </div>
+      <div class="container philosophy-note reveal">광고 집행이 필요할 땐 돕습니다. 다만, 늘 기본이 먼저입니다.</div>
+    </section>
+
+    <section class="project-section" id="project">
+      <div class="container project-grid">
+        <div class="project-lead reveal">
+          <span>PROJECT 001</span>
+          <h2>검색되지 않던 브랜드.<br>검색되는 브랜드가 되다.</h2>
+          <a href="#diagnosis">자세히 보기 →</a>
+        </div>
+
+        <div class="project-cards reveal">
+          <article>
+            <div class="project-art art-one"></div>
+            <small>PROJECT 002</small>
+            <h3>지역 키워드 상위 노출</h3>
+            <p>신규 고객 유입 구조를 다시 세웁니다.</p>
+          </article>
+          <article>
+            <div class="project-art art-two"></div>
+            <small>PROJECT 003</small>
+            <h3>홈페이지 문의 전환율 개선</h3>
+            <p>조용하던 페이지를 문의로 이어지게 만듭니다.</p>
+          </article>
+          <article>
+            <div class="project-art art-three">BRAND</div>
+            <small>PROJECT 004</small>
+            <h3>브랜드 메시지 재정비</h3>
+            <p>무엇을 하는지 한눈에 읽히게 만듭니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="journal-lab">
+      <div class="container jl-grid">
+        <div class="journal reveal" id="journal">
+          <h2>매일, 기본을 이야기합니다.</h2>
+          <p>검색·홈페이지·문구까지, 대표님께 바로 쓸모 있는 이야기를 네이버 블로그에 하나씩 올립니다.</p>
+          <a class="button outline" href="https://blog.naver.com/rajkjk" target="_blank" rel="noopener noreferrer">블로그 보기 ↗</a>
+        </div>
+
+        <div class="closing reveal" id="lab">
+          <h2>오도독이 떠나도,<br>대표님은 계속 갑니다.</h2>
+          <p>그 시작을, 지금 함께하세요.</p>
+          <a class="button outline light-outline" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer">
+            카카오톡으로 문의하기 ↗
+          </a>
+          <div class="closing-sprout">⌁</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/ododok-logo-transparent.png" alt="ODODOK 오도독">
+        <p>오도독 — 광고보다 기본.</p>
+      </div>
+
+      <nav aria-label="푸터 메뉴">
+        <div><strong>ABOUT</strong><a href="#about">오도독 소개</a><a href="#about">철학</a></div>
+        <div><strong>DIAGNOSIS</strong><a href="#diagnosis">무료 기본진단</a><a href="#diagnosis">진단 절차</a></div>
+        <div><strong>PROJECTS</strong><a href="#project">프로젝트</a><a href="#project">진행 사례</a></div>
+        <div><strong>LAB</strong><a href="#lab">실험 노트</a><a href="#lab">인사이트</a></div>
+        <div><strong>BLOG</strong><a href="https://blog.naver.com/rajkjk" target="_blank" rel="noopener noreferrer">전체 글 보기</a></div>
+      </nav>
+
+      <div class="footer-contact">
+        <strong>CONTACT</strong>
+        <a href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer">카카오톡 문의</a>
+        <span>© 2026 ODODOK</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
