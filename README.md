@@ -1,23 +1,26 @@
-# ODODOK V4 FINAL
+# ODODOK 모바일 개선 업데이트
 
-승인한 시안을 기준으로 만든 GitHub Pages 배포용 완성본입니다.
+기존 배포본의 같은 경로에 아래 파일을 덮어쓰세요.
 
-## 적용 사항
-- 사용자가 제공한 실제 ODODOK 로고 적용
-- 흑백 중심 + 새싹 초록 포인트
-- 확정 문구 흐름 반영
-- 모든 진단/문의 CTA를 카카오톡 채팅으로 연결
-- 네이버 블로그 연결
-- 반응형, 스크롤 애니메이션, 기본 SEO 파일 포함
+- index.html
+- project001.html (신규)
+- css/style.css
+- js/main.js
 
-## 연결 주소
-- 카카오톡 채팅: https://pf.kakao.com/_xmunxnX/chat
-- 카카오톡 채널: https://pf.kakao.com/_xmunxnX
+기존 assets, sitemap.xml, robots.txt, manifest.json은 그대로 유지합니다.
+
+## 적용 내용
+- PROJECT 001 전용 상세 페이지 생성
+- 실제 사례가 아닌 카드에 '진행 가능한 예시' 표시
+- LAB 메뉴 제거, BLOG 하나로 정리
+- 히어로 문구 완성
+- 모바일 서비스 4개 완전 세로 배열
+- 모바일 프로세스 6단계 완전 세로 배열
+- 모바일 하단 고정 카카오톡 CTA 추가
+- 모바일 메뉴 터치 영역 및 ESC 닫기 개선
+- 320px~430px 대응 보강
+
+## 확인된 링크
+- 카카오톡: https://pf.kakao.com/_xmunxnX/chat
 - 네이버 블로그: https://blog.naver.com/rajkjk
-- GitHub Pages: https://dongmin1.github.io/Ododok/
-
-## 확인
-압축을 푼 뒤 `index.html`을 더블클릭하면 로컬에서 확인할 수 있습니다.
-
-## 배포
-압축 내부의 파일과 폴더를 GitHub 저장소 최상단에 그대로 업로드하세요.
+- PROJECT 001: project001.html
