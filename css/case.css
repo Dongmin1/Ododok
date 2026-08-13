@@ -1,0 +1,57 @@
+/* ODODOK CASE STUDY TEMPLATE
+   project001.html 및 앞으로 추가될 case00N.html 이 공통으로 사용하는 스타일입니다.
+   style.css의 디자인 토큰(--black, --white, --off, --line, --muted, --green)을 그대로 씁니다. */
+
+.case-detail{padding:140px 0 100px}
+
+.case-eyebrow-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.case-eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.16em;color:#777}
+.case-live-badge{display:inline-flex;align-items:center;gap:7px;padding:5px 10px;border:1px solid #ccc;border-radius:999px;font-size:.72rem;font-weight:700;color:#444}
+.case-live-badge i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(78,113,51,.14)}
+.case-live-badge.done{color:#777;border-color:#ddd}
+.case-live-badge.done i{background:#999;box-shadow:0 0 0 4px rgba(153,153,153,.12)}
+
+.case-detail h1{margin-top:18px;font-size:clamp(3.3rem,8vw,7rem);line-height:.98;letter-spacing:-.08em}
+.case-detail .lead{max-width:760px;margin-top:30px;font-size:clamp(1.15rem,2vw,1.5rem);color:#555}
+
+/* 업종 / 기간 / 상태 같은 메타 정보 */
+.case-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.case-meta span{padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:.8rem;color:#555;background:#fafaf8}
+
+/* 문제 -> 진단 -> 작업 내용 -> 현재 결과, 4단계 그리드 */
+.case-stage-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:70px;background:var(--line);border:1px solid var(--line)}
+.case-stage-grid article{background:#fff;padding:30px 26px}
+.case-stage-grid small{color:#777;font-size:.76rem;font-weight:700;letter-spacing:.04em}
+.case-stage-grid h2{margin-top:12px;font-size:1.15rem;line-height:1.35}
+.case-stage-grid p{margin-top:12px;color:#666;font-size:.92rem;line-height:1.6}
+.case-stage-grid article.is-progress{background:#fafaf8}
+.case-stage-grid article.is-progress h2{color:#555}
+
+/* 투명성 노트 - "우리는 사례를 이렇게 공개합니다" */
+.case-note{margin-top:50px;padding:32px;background:#0c0c0c;color:#fff;border-radius:4px}
+.case-note h2{font-size:1.3rem}
+.case-note p{max-width:760px;color:#bbb;margin-top:12px;line-height:1.7}
+
+/* 이전/다음 사례 내비게이션 */
+.case-series-nav{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:36px;background:var(--line);border:1px solid var(--line)}
+.case-series-nav a{display:block;padding:22px 24px;background:#fff;transition:background .2s}
+.case-series-nav a:hover{background:#fafaf8}
+.case-series-nav a.disabled{color:#aaa;pointer-events:none}
+.case-series-nav small{display:block;color:#888;font-size:.72rem;font-weight:700;letter-spacing:.06em}
+.case-series-nav strong{display:block;margin-top:6px;font-size:1rem}
+.case-series-nav .next{text-align:right}
+
+.case-back-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+
+@media(max-width:900px){
+  .case-stage-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .case-detail{padding:110px 0 80px}
+  .case-stage-grid{grid-template-columns:1fr;margin-top:45px}
+  .case-stage-grid article{padding:26px}
+  .case-note{padding:26px}
+  .case-series-nav{grid-template-columns:1fr}
+  .case-series-nav .next{text-align:left}
+  .case-back-row .button{width:100%}
+}

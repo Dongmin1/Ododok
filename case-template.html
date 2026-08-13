@@ -1,0 +1,99 @@
+<!--
+  ============================================================
+  오도독 사례(CASE) 템플릿 — 새 사례가 생기면 이 파일을 복사해서 쓰세요.
+
+  사용법:
+  1. 이 파일을 case002.html 로 복사 (파일명 뒤 숫자만 바꾸면 됨)
+  2. 아래 [대괄호] 부분을 실제 내용으로 교체
+  3. index.html의 #project 섹션과 sitemap.xml에 새 사례 링크 추가
+  4. 이 파일(case-template.html)은 <meta name="robots" content="noindex">
+     가 걸려 있어서 검색에는 안 잡혀요. 복사한 case002.html에서는
+     이 태그를 꼭 지워주세요.
+  ============================================================
+-->
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <title>CASE 00[N] | 오도독 사례 - [고객사/프로젝트 이름]</title>
+  <meta name="description" content="[한 줄 요약: 어떤 상태에서 시작해서 무엇을 했는지]">
+  <link rel="canonical" href="https://dongmin1.github.io/Ododok/case00[N].html">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/case.css">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="CASE 00[N] | 오도독 사례 - [고객사/프로젝트 이름]">
+  <meta property="og:description" content="[SNS 공유용 한 줄 설명]">
+  <meta property="og:url" content="https://dongmin1.github.io/Ododok/case00[N].html">
+</head>
+<body>
+<header class="site-header scrolled">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="오도독 홈"><img src="assets/ododok-logo.png" alt="ODODOK 오도독"></a>
+    <a class="header-cta" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer">카카오톡으로 문의하기 ↗</a>
+  </div>
+</header>
+<main class="case-detail">
+  <div class="container">
+
+    <div class="case-eyebrow-row">
+      <span class="case-eyebrow">CASE 00[N] · [고객사/브랜드명]</span>
+      <!-- 진행 중이면 아래 그대로, 완료됐으면 class="case-live-badge done" 으로 바꾸고 텍스트를 "완료"로 -->
+      <span class="case-live-badge"><i></i> 진행 중</span>
+    </div>
+
+    <h1>[한 문장 헤드라인 — 무엇이 어떻게 바뀌었는지]</h1>
+    <p class="lead">[2~3문장 리드. 어떤 상황에서 시작했고, 무엇을 하고 있는지/했는지]</p>
+
+    <div class="case-meta">
+      <span>업종: [업종명]</span>
+      <span>시작: [YYYY년 M월]</span>
+      <span>현재 단계: [단계명]</span>
+    </div>
+
+    <div class="case-stage-grid">
+      <article>
+        <small>01 · 문제</small>
+        <h2>[어떤 문제였는지 — 한 줄]</h2>
+        <p>[문제 상황을 구체적으로. 숫자가 있으면 숫자로]</p>
+      </article>
+      <article>
+        <small>02 · 진단</small>
+        <h2>[진단 결과 — 한 줄]</h2>
+        <p>[무엇이 원인이었는지, 무엇부터 손대야 했는지]</p>
+      </article>
+      <article>
+        <small>03 · 작업 내용</small>
+        <h2>[무엇을 했는지 — 한 줄]</h2>
+        <p>[실제로 진행한 작업을 시간순 또는 항목별로]</p>
+      </article>
+      <!-- 아직 결과가 없으면 class="is-progress" 유지, 결과가 나왔으면 지워도 됨 -->
+      <article class="is-progress">
+        <small>04 · 현재 결과</small>
+        <h2>[결과 또는 "아직 진행 중"]</h2>
+        <p>[확인된 수치/변화만 적기. 없으면 없다고 그대로 적기]</p>
+      </article>
+    </div>
+
+    <div class="case-note">
+      <h2>[이 사례에서 오도독이 지킨 원칙 한 줄]</h2>
+      <p>[선택 사항 — 이 사례에서 특별히 강조하고 싶은 원칙이나 맥락이 있으면 여기에]</p>
+    </div>
+
+    <div class="case-series-nav">
+      <!-- 이전 사례로 링크 -->
+      <a href="case00[N-1].html"><small>이전 사례</small><strong>CASE 00[N-1] · [이전 사례 제목]</strong></a>
+      <!-- 다음 사례가 아직 없으면 disabled 유지, 생기면 a href로 교체 -->
+      <span class="disabled next"><small>다음 사례</small><strong>CASE 00[N+1] · 준비 중</strong></span>
+    </div>
+
+    <div class="case-back-row">
+      <a class="button outline" href="index.html#project">홈으로 돌아가기</a>
+      <a class="button black" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer">무료 기본진단 시작하기 ↗</a>
+    </div>
+
+  </div>
+</main>
+</body>
+</html>
