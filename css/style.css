@@ -50,3 +50,15 @@ footer{border-top:1px solid var(--line);padding:38px 0}.footer-grid{display:grid
 @media(max-width:720px){
   .faq-list summary{font-size:.95rem;padding:18px 2px}
 }
+
+/* 독립 FAQ 페이지 */
+.faq-page{padding:150px 0 100px}
+.faq-page .display-title{font-size:clamp(2.8rem,7vw,5.2rem);margin-top:14px}
+.faq-page-lead{margin-top:20px;max-width:600px;color:#666;font-size:1.05rem;line-height:1.7}
+.faq-cta{margin-top:48px;padding-top:38px;border-top:1px solid var(--line);display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.faq-cta p{color:#777;font-size:.92rem}
+@media(max-width:720px){
+  .faq-page{padding:120px 0 70px}
+  .faq-cta{flex-direction:column;align-items:flex-start;gap:14px}
+  .faq-cta .button{width:100%}
+}
