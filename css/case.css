@@ -50,6 +50,17 @@
 .case-evidence-grid img{display:block;width:100%;height:auto}
 .case-evidence-grid figcaption{padding:12px 16px;font-size:.8rem;color:#666;border-top:1px solid var(--line)}
 
+/* 진행 체크리스트 (다크 카드) */
+.case-checklist{margin-top:50px;border:1px solid #3b3b3b;border-radius:16px;padding:28px;background:#111}
+.case-checklist h3{font-size:1.15rem;color:#fff;margin-bottom:18px}
+.case-checklist ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 24px;padding:0;margin:0}
+.case-checklist li{display:flex;align-items:center;gap:11px;padding:12px 0;border-bottom:1px solid #292929;color:#777;font-size:.88rem}
+.case-checklist li span{display:grid;place-items:center;width:22px;height:22px;border:1px solid #555;border-radius:50%;font-size:.72rem;flex:none}
+.case-checklist li.done{color:#eee}
+.case-checklist li.done span{background:#fff;color:#111;border-color:#fff}
+.case-checklist li.active{color:#d7d7d7}
+.case-checklist li.active span{color:#72ad5b;border-color:#72ad5b;font-size:1.2rem}
+
 @media(max-width:900px){
   .case-stage-grid{grid-template-columns:1fr 1fr}
 }
@@ -62,4 +73,5 @@
   .case-series-nav .next{text-align:left}
   .case-back-row .button{width:100%}
   .case-evidence-grid{grid-template-columns:1fr}
+  .case-checklist ul{grid-template-columns:1fr}
 }
