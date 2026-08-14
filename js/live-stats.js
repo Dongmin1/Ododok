@@ -45,7 +45,9 @@
       }
 
       if(cardEl){
-        cardEl.textContent = `실시간 노출 ${t.impressions ?? "–"}회 · 클릭 ${t.clicks ?? "–"}회`;
+        const imp = t.impressions ?? "–";
+        const clk = t.clicks ?? "–";
+        cardEl.innerHTML = `<span class="dot"></span><span><strong>${imp}</strong>노출<span class="sep">·</span><strong>${clk}</strong>클릭</span>`;
       }
     })
     .catch(() => {
