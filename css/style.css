@@ -76,9 +76,11 @@ footer{border-top:1px solid var(--line);padding:38px 0}.footer-grid{display:grid
 .book-block-copy h3{margin-top:10px;font-size:1.35rem;line-height:1.45;letter-spacing:-.02em}
 .book-block-copy p{margin-top:14px;max-width:600px;color:#666;font-size:.95rem;line-height:1.75}
 .book-block-copy .text-link{margin-top:16px;display:inline-block}
+.book-title-nowrap{white-space:nowrap}
 @media(max-width:720px){
   .book-block{grid-template-columns:96px 1fr;gap:20px;margin-top:44px;padding-top:38px}
   .book-block-copy h3{font-size:1.15rem}
+  .book-title-nowrap{white-space:normal}
 }
 
 /* CASE 섹션 - 가로 스크롤 캐러셀 */
@@ -98,6 +100,8 @@ footer{border-top:1px solid var(--line);padding:38px 0}.footer-grid{display:grid
 .case-card h3{margin-top:16px;font-size:1.3rem;letter-spacing:-.02em}
 .case-card p{margin-top:12px;color:#666;font-size:.92rem;line-height:1.65;flex:1}
 .case-card .text-link{margin-top:16px;display:inline-block}
+.case-card-live{display:block;margin-top:14px;font-size:.8rem;font-weight:700;color:var(--green)}
+.case-card-live:empty{display:none}
 .case-card-next{background:#fafaf8;border-style:dashed;justify-content:center}
 .case-card-next .case-card-num,.case-card-next h3,.case-card-next p{color:#aaa}
 

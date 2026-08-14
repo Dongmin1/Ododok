@@ -60,16 +60,27 @@
       </article>
     </div>
 
+    <div class="case-live" id="caseLive">
+      <div class="case-live-head">
+        <h3>실시간 데이터</h3>
+        <span class="case-live-updated" id="liveUpdated">불러오는 중…</span>
+      </div>
+      <div class="case-live-stats">
+        <div><strong id="liveClicks">–</strong><small>클릭수</small></div>
+        <div><strong id="liveImpressions">–</strong><small>노출수</small></div>
+        <div><strong id="liveCtr">–</strong><small>평균 CTR</small></div>
+        <div><strong id="livePosition">–</strong><small>평균 게재순위</small></div>
+      </div>
+      <div class="case-live-chart"><svg id="liveChart" viewBox="0 0 600 120" preserveAspectRatio="none"></svg></div>
+      <p class="case-live-note">Google Search Console 데이터를 매일 자동으로 가져와 갱신합니다. 캡처해서 올리는 게 아니라, 지금 이 순간의 실제 숫자입니다.</p>
+    </div>
+
     <div class="case-evidence">
-      <h3 style="font-size:1.05rem">증거 화면</h3>
-      <div class="case-evidence-grid">
-        <figure>
-          <img src="assets/case001/gsc-growth.png" alt="Google Search Console 실적 화면 - 최근 3개월 클릭수 8회, 노출수 27회로 증가">
-          <figcaption>Google Search Console · 최근 3개월 클릭 8 · 노출 27 · 평균 게재순위 4.1</figcaption>
-        </figure>
+      <h3 style="font-size:1.05rem">네이버 블로그</h3>
+      <div class="case-evidence-grid case-evidence-single">
         <figure>
           <img src="assets/case001/naver-views-growth.png" alt="네이버 블로그 조회수 화면 - 주간 조회수 0에서 67회로 증가">
-          <figcaption>네이버 블로그 방문 분석 · 주간 조회수 0 → 67</figcaption>
+          <figcaption>네이버 블로그 방문 분석 · 주간 조회수 0 → 67 (수동 캡처, 네이버는 아직 자동화 전입니다)</figcaption>
         </figure>
       </div>
     </div>
@@ -109,5 +120,6 @@
 
   </div>
 </main>
+<script src="js/live-stats.js"></script>
 </body>
 </html>
