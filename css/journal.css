@@ -1,0 +1,41 @@
+/* ODODOK 자체 블로그(journal) 스타일
+   목록 페이지(blog/index.html), 글 페이지(blog/post-*.html), 템플릿이 공통으로 씁니다.
+   style.css의 디자인 토큰(--black, --white, --off, --line, --muted, --green)을 그대로 씁니다. */
+
+.journal-page{padding:140px 0 100px}
+.journal-page .display-title{font-size:clamp(2.8rem,7vw,5.2rem);margin-top:14px}
+.journal-page-lead{margin-top:18px;max-width:600px;color:#666;font-size:1.02rem;line-height:1.7}
+
+/* 글 목록 */
+.post-list{margin-top:50px;border-top:1px solid var(--line)}
+.post-list a{display:grid;grid-template-columns:120px 1fr 24px;gap:24px;align-items:center;padding:28px 2px;border-bottom:1px solid var(--line);transition:opacity .2s}
+.post-list a:hover{opacity:.6}
+.post-list time{font-size:.78rem;color:#999}
+.post-list h2{font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
+.post-list p{margin-top:6px;font-size:.86rem;color:#777;line-height:1.6}
+.post-list .arrow{font-size:1.2rem;color:#aaa;text-align:right}
+.post-list .empty-note{padding:40px 2px;color:#999;font-size:.9rem}
+
+/* 글 상세 */
+.article-page{padding:140px 0 100px}
+.article-wrap{max-width:720px;margin:0 auto}
+.article-eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.14em;color:#777}
+.article-wrap h1{margin-top:16px;font-size:clamp(2.3rem,5.5vw,3.4rem);line-height:1.18;letter-spacing:-.03em}
+.article-meta{margin-top:18px;display:flex;gap:14px;flex-wrap:wrap;color:#999;font-size:.82rem}
+.article-cover{margin-top:36px;max-width:280px}
+.article-cover img{width:100%;border-radius:6px;box-shadow:0 20px 50px rgba(0,0,0,.14)}
+.article-body{margin-top:50px;font-size:1.06rem;line-height:1.95;color:#333}
+.article-body p{margin:0 0 26px}
+.article-body p.lead{font-size:1.2rem;color:#111;font-weight:600}
+.article-body h2{margin:52px 0 16px;font-size:1.4rem;letter-spacing:-.01em}
+.article-body strong{font-weight:750}
+.article-body .book-meta{margin:44px 0;padding:26px 28px;background:#fafaf8;border:1px solid var(--line);border-radius:8px;font-size:.92rem;line-height:1.9;color:#555}
+.article-body .book-meta strong{display:block;font-size:1rem;color:#111;margin-bottom:4px}
+.article-nav{margin-top:60px;padding-top:30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media(max-width:720px){
+  .journal-page{padding:110px 0 70px}
+  .article-page{padding:110px 0 70px}
+  .post-list a{grid-template-columns:1fr 20px;gap:8px}
+  .post-list time{grid-column:1/-1}
+}

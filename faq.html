@@ -52,21 +52,24 @@
   </script>
 </head>
 <body>
-  <header class="site-header scrolled">
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header" id="siteHeader">
     <div class="container nav">
       <a class="brand" href="index.html" aria-label="오도독 홈">
         <img src="assets/ododok-logo-transparent.png" alt="ODODOK 오도독">
       </a>
-      <nav class="nav-links" aria-label="주요 메뉴">
+      <nav class="nav-links" id="navLinks" aria-label="주요 메뉴">
         <a href="index.html#about">ABOUT</a>
         <a href="index.html#diagnosis">DIAGNOSIS</a>
         <a href="index.html#project">CASES</a>
-        <a href="index.html#journal">BLOG</a>
+        <a href="blog/index.html">BLOG</a>
         <a href="faq.html">FAQ</a>
       </nav>
       <a class="header-cta" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer">
         카카오톡으로 문의하기 <span>↗</span>
       </a>
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="navLinks">MENU</button>
     </div>
   </header>
 
@@ -122,7 +125,7 @@
         <div><strong>ABOUT</strong><a href="index.html#about">오도독 소개</a></div>
         <div><strong>DIAGNOSIS</strong><a href="index.html#diagnosis">무료 기본진단</a></div>
         <div><strong>CASES</strong><a href="index.html#project">사례</a></div>
-        <div><strong>BLOG</strong><a href="https://blog.naver.com/rajkjk" target="_blank" rel="noopener noreferrer">전체 글 보기</a></div>
+        <div><strong>BLOG</strong><a href="blog/index.html">전체 글 보기</a></div>
         <div><strong>FAQ</strong><a href="faq.html">자주 묻는 것들</a></div>
       </nav>
       <div class="footer-contact">
@@ -134,12 +137,13 @@
     </div>
   </footer>
   <div class="biz-info">
-    <div class="container">상호 오도독 · 사업자등록번호 110-96-79622 · 문의 및 상담은 카카오톡 채널로 받습니다</div>
+    <div class="container">상호 오도독 · 대표 최동민 · 사업자등록번호 110-96-79622 · 문의 및 상담은 카카오톡 채널로 받습니다</div>
   </div>
 
-  <a class="mobile-kakao" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer" aria-label="카카오톡으로 무료 기본진단 시작하기">
-    무료 기본진단 시작하기 <span>↗</span>
-  </a>
+  <div class="mobile-cta-bar">
+    <a class="secondary" href="index.html#diagnosis">무료 진단</a>
+    <a class="primary" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer" aria-label="카카오톡으로 문의하기">카카오톡 상담 ↗</a>
+  </div>
   <script src="js/main.js"></script>
 </body>
 </html>

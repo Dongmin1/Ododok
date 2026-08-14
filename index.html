@@ -27,6 +27,10 @@
     "image": "https://dongmin1.github.io/Ododok/assets/hero-sprout-approved.webp",
     "description": "오도독은 광고부터 권하지 않습니다. 검색, 홈페이지, 브랜드 문구의 현재 상태부터 무료로 함께 살핍니다.",
     "areaServed": "KR",
+    "founder": {
+      "@type": "Person",
+      "name": "최동민"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "KR"
@@ -51,7 +55,7 @@
         <a href="#about">ABOUT</a>
         <a href="#diagnosis">DIAGNOSIS</a>
         <a href="#project">CASES</a>
-        <a href="#journal">BLOG</a>
+        <a href="blog/index.html">BLOG</a>
         <a href="faq.html">FAQ</a>
       </nav>
       <a class="header-cta" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer">
@@ -106,6 +110,17 @@
           <p>검색해도 안 나오고,<br>홈페이지는 조용하고,<br>소개글은 뭘 파는지 안 읽히는데</p>
           <p>여기서 광고비만 늘리는 건,<br>밑 빠진 독이니까요.</p>
           <strong>그 독부터 막습니다.<br>그게 오도독입니다.</strong>
+        </div>
+      </div>
+      <div class="container book-block reveal">
+        <div class="book-block-cover">
+          <img src="assets/book-cover.png" alt="기본이 멀리 간다 - 흔들리며, 그러나 멈추지 않고, 최동민 지음">
+        </div>
+        <div class="book-block-copy">
+          <span class="book-block-kicker">ODODOK BOOK</span>
+          <h3>"기본이 멀리 갑니다"는<br>원래 제 책 제목이었습니다.</h3>
+          <p>8년 요리사로 일하면서 배운 걸 그대로 브랜딩과 마케팅으로 옮겼습니다. 『기본이 멀리 간다 — 흔들리며, 그러나 멈추지 않고』, 2026년 8월 출간. 지은이 최동민.</p>
+          <a class="text-link" href="blog/post-001-book.html">책 출간 이야기 읽어보기 →</a>
         </div>
       </div>
     </section>
@@ -257,13 +272,25 @@
       <div class="container next-project reveal">CASE 002는 실제 진행이 시작되면, 이 자리에 같은 방식으로 공개됩니다.</div>
     </section>
 
+    <section class="section review-section">
+      <div class="container">
+        <span class="section-kicker reveal">REVIEW</span>
+        <h2 class="display-title reveal" style="font-size:clamp(2.2rem,4.5vw,3.2rem)">고객 후기</h2>
+        <div class="review-empty reveal">
+          <p>아직 후기가 없습니다.</p>
+          <p class="review-empty-sub">첫 진단, 첫 프로젝트가 생기고 실제 후기를 받으면 과장 없이 그대로 여기에 싣습니다.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="journal-contact">
       <div class="container jl-grid">
         <div class="journal reveal" id="journal">
           <span class="section-kicker">ODODOK BLOG</span>
           <h2>매일,<br>기본을 이야기합니다.</h2>
-          <p>검색·홈페이지·문구까지, 대표님께 바로 쓸모 있는 이야기를 네이버 블로그에 하나씩 올립니다.</p>
-          <a class="button outline" href="https://blog.naver.com/rajkjk" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M15 3v4h4"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="15.5" x2="16" y2="15.5"/></svg>블로그 보기 ↗</a>
+          <p>검색·홈페이지·문구까지, 대표님께 바로 쓸모 있는 이야기를 이제 오도독 홈페이지에 직접 씁니다.</p>
+          <a class="button outline" href="blog/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M15 3v4h4"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="15.5" x2="16" y2="15.5"/></svg>블로그 보기</a>
+          <a class="text-link" style="margin-top:14px" href="https://blog.naver.com/rajkjk" target="_blank" rel="noopener noreferrer">예전 글은 네이버 블로그에서 →</a>
         </div>
         <div class="closing reveal" id="contact">
           <h2>오도독이 떠나도,<br>대표님은 계속 갑니다.</h2>
@@ -276,9 +303,10 @@
     </section>
   </main>
 
-  <a class="mobile-kakao" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer" aria-label="카카오톡으로 무료 기본진단 시작하기">
-    무료 기본진단 시작하기 <span>↗</span>
-  </a>
+  <div class="mobile-cta-bar">
+    <a class="secondary" href="#diagnosis">무료 진단</a>
+    <a class="primary" href="https://pf.kakao.com/_xmunxnX/chat" target="_blank" rel="noopener noreferrer" aria-label="카카오톡으로 문의하기">카카오톡 상담 ↗</a>
+  </div>
 
   <footer>
     <div class="container footer-grid">
@@ -290,7 +318,7 @@
         <div><strong>ABOUT</strong><a href="#about">오도독 소개</a><a href="#about">철학</a></div>
         <div><strong>DIAGNOSIS</strong><a href="#diagnosis">무료 기본진단</a><a href="#diagnosis">진단 절차</a></div>
         <div><strong>CASES</strong><a href="#project">사례</a><a href="project001.html">CASE 001</a></div>
-        <div><strong>BLOG</strong><a href="https://blog.naver.com/rajkjk" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M15 3v4h4"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="15.5" x2="16" y2="15.5"/></svg>전체 글 보기</a></div>
+        <div><strong>BLOG</strong><a href="blog/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M15 3v4h4"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="15.5" x2="16" y2="15.5"/></svg>전체 글 보기</a></div>
         <div><strong>FAQ</strong><a href="faq.html">자주 묻는 것들</a></div>
       </nav>
       <div class="footer-contact">
@@ -302,7 +330,7 @@
     </div>
   </footer>
   <div class="biz-info">
-    <div class="container">상호 오도독 · 사업자등록번호 110-96-79622 · 문의 및 상담은 카카오톡 채널로 받습니다</div>
+    <div class="container">상호 오도독 · 대표 최동민 · 사업자등록번호 110-96-79622 · 문의 및 상담은 카카오톡 채널로 받습니다</div>
   </div>
   <script src="js/main.js"></script>
 </body>
