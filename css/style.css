@@ -100,7 +100,8 @@ footer{border-top:1px solid var(--line);padding:38px 0}.footer-grid{display:grid
 .case-card h3{margin-top:16px;font-size:1.3rem;letter-spacing:-.02em}
 .case-card p{margin-top:12px;color:#666;font-size:.92rem;line-height:1.65;flex:1}
 .case-card .text-link{margin-top:16px;display:inline-block}
-.case-card-live{display:inline-flex;align-items:center;gap:7px;margin-top:16px;padding:6px 13px;border:1px solid var(--line);border-radius:999px;background:#fafaf8;font-size:.78rem;color:#777}
+.case-card-live{display:inline-flex;align-items:center;gap:7px;margin-top:16px;padding:6px 13px;border:1px solid var(--line);border-radius:999px;background:#fafaf8;font-size:.78rem;color:#777;transition:background .2s,border-color .2s}
+.case-card-live:hover{background:#f1f1ec;border-color:#ccc}
 .case-card-live:empty{display:none}
 .case-card-live .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(78,113,51,.15);flex:none}
 .case-card-live strong{color:var(--black);font-weight:800;margin-right:3px}
