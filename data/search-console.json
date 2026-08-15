@@ -1,14 +1,14 @@
 {
   "siteUrl": "https://dongmin1.github.io/Ododok/",
   "range": {
-    "startDate": "2026-05-15",
-    "endDate": "2026-08-12"
+    "startDate": "2026-05-16",
+    "endDate": "2026-08-13"
   },
-  "updatedAt": "2026-08-14T21:54:01.084211+00:00",
+  "updatedAt": "2026-08-15T21:28:22.192088+00:00",
   "totals": {
     "clicks": 8,
-    "impressions": 27,
-    "ctr": 0.2963,
+    "impressions": 28,
+    "ctr": 0.2857,
     "position": 4.07
   },
   "daily": [
@@ -200,15 +200,22 @@
       "impressions": 0,
       "ctr": 0,
       "position": 0
+    },
+    {
+      "date": "2026-08-13",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
     }
   ],
   "topQueries": [
     {
       "key": "ododok",
       "clicks": 2,
-      "impressions": 6,
-      "ctr": 0.3333,
-      "position": 4.67
+      "impressions": 7,
+      "ctr": 0.2857,
+      "position": 4.57
     },
     {
       "key": "오도독",
@@ -222,8 +229,8 @@
     {
       "key": "https://dongmin1.github.io/Ododok/",
       "clicks": 8,
-      "impressions": 27,
-      "ctr": 0.2963,
+      "impressions": 28,
+      "ctr": 0.2857,
       "position": 4.07
     }
   ]
