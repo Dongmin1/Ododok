@@ -1,10 +1,10 @@
 {
   "siteUrl": "https://dongmin1.github.io/Ododok/",
   "range": {
-    "startDate": "2026-05-18",
-    "endDate": "2026-08-15"
+    "startDate": "2026-05-19",
+    "endDate": "2026-08-16"
   },
-  "updatedAt": "2026-08-17T21:32:04.036897+00:00",
+  "updatedAt": "2026-08-18T21:31:04.396757+00:00",
   "totals": {
     "clicks": 8,
     "impressions": 30,
@@ -217,6 +217,13 @@
     },
     {
       "date": "2026-08-15",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    {
+      "date": "2026-08-16",
       "clicks": 0,
       "impressions": 0,
       "ctr": 0,
