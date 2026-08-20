@@ -26,7 +26,7 @@ jobs:
       - name: Fetch Search Console data
         env:
           GSC_SERVICE_ACCOUNT_KEY_B64: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY_B64 }}
-          GSC_SITE_URL: "https://dongmin1.github.io/Ododok/"
+          GSC_SITE_URLS: "https://dongmin1.github.io/Ododok/,https://ododok.kr/"
         run: python scripts/fetch_search_console.py
 
       - name: Commit updated data (if changed)
