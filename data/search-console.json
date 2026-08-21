@@ -4,10 +4,10 @@
     "https://ododok.kr/"
   ],
   "range": {
-    "startDate": "2026-05-21",
-    "endDate": "2026-08-18"
+    "startDate": "2026-05-22",
+    "endDate": "2026-08-19"
   },
-  "updatedAt": "2026-08-20T21:34:45.399903+00:00",
+  "updatedAt": "2026-08-21T21:31:16.027538+00:00",
   "totals": {
     "clicks": 8,
     "impressions": 30,
@@ -241,6 +241,13 @@
     },
     {
       "date": "2026-08-18",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    {
+      "date": "2026-08-19",
       "clicks": 0,
       "impressions": 0,
       "ctr": 0,
