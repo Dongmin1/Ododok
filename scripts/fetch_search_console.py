@@ -7,9 +7,10 @@ Google Search Console API에서 성과 데이터를 가져와 data/search-consol
   2. GSC_SERVICE_ACCOUNT_KEY_B64 / GSC_SERVICE_ACCOUNT_KEY 환경변수 — 서비스 계정 JSON 키를
      쓸 수 있는 환경(조직 정책이 키 발급을 막지 않는 경우)에서 로컬 테스트용으로만 사용합니다.
 
-  GSC_SITE_URLS : 콤마(,)로 구분한 Search Console 속성 URL 목록.
-                  여러 개를 합산해서 하나의 결과로 만듭니다.
-                  (기본값: 예전 GitHub Pages 주소 + 새 ododok.kr 도메인)
+  GSC_SITE_URLS : 콤마(,)로 구분한 Search Console 속성 목록. 여러 개를 합산해서 하나의
+                  결과로 만듭니다. URL 속성은 'https://example.com/' 형식 그대로,
+                  도메인 속성(DNS로 인증한 경우)은 'sc-domain:example.com' 형식으로 씁니다.
+                  (기본값: 예전 GitHub Pages 주소[URL 속성] + ododok.kr[도메인 속성])
   GSC_SITE_URL  : 예전 방식 호환용 - 속성 하나만 넘길 때 사용 (있으면 GSC_SITE_URLS보다 우선).
 
   ※ 여러 속성을 합산하려면, 그 서비스 계정이 각 속성에 Search Console
@@ -27,7 +28,7 @@ SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
 API_BASE = "https://www.googleapis.com/webmasters/v3"
 DEFAULT_SITE_URLS = [
     "https://dongmin1.github.io/Ododok/",
-    "https://ododok.kr/",
+    "sc-domain:ododok.kr",
 ]
 OUTPUT_PATH = os.path.join("data", "search-console.json")
 
