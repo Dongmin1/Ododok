@@ -7,12 +7,12 @@
     "startDate": "2026-05-30",
     "endDate": "2026-08-27"
   },
-  "updatedAt": "2026-08-29T03:07:47.066355+00:00",
+  "updatedAt": "2026-08-29T23:12:12.966694+00:00",
   "totals": {
     "clicks": 11,
-    "impressions": 42,
-    "ctr": 0.2619,
-    "position": 3.57
+    "impressions": 43,
+    "ctr": 0.2558,
+    "position": 3.54
   },
   "daily": [
     {
@@ -301,15 +301,22 @@
       "impressions": 0,
       "ctr": 0,
       "position": 0
+    },
+    {
+      "date": "2026-08-27",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 2.0
     }
   ],
   "topQueries": [
     {
       "key": "ododok",
       "clicks": 5,
-      "impressions": 14,
-      "ctr": 0.3571,
-      "position": 3.5
+      "impressions": 15,
+      "ctr": 0.3333,
+      "position": 3.4
     },
     {
       "key": "오도독",
@@ -330,9 +337,9 @@
     {
       "key": "https://ododok.kr/",
       "clicks": 3,
-      "impressions": 12,
-      "ctr": 0.25,
-      "position": 2.75
+      "impressions": 13,
+      "ctr": 0.2308,
+      "position": 2.69
     },
     {
       "key": "https://ododok.kr/faq.html",
