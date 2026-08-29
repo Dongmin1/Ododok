@@ -4,10 +4,10 @@
     "sc-domain:ododok.kr"
   ],
   "range": {
-    "startDate": "2026-05-29",
-    "endDate": "2026-08-26"
+    "startDate": "2026-05-30",
+    "endDate": "2026-08-27"
   },
-  "updatedAt": "2026-08-28T05:11:00.501236+00:00",
+  "updatedAt": "2026-08-29T03:07:47.066355+00:00",
   "totals": {
     "clicks": 11,
     "impressions": 42,
@@ -290,6 +290,13 @@
     },
     {
       "date": "2026-08-25",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    {
+      "date": "2026-08-26",
       "clicks": 0,
       "impressions": 0,
       "ctr": 0,
