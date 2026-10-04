@@ -4,15 +4,15 @@
     "sc-domain:ododok.kr"
   ],
   "range": {
-    "startDate": "2026-07-04",
-    "endDate": "2026-10-01"
+    "startDate": "2026-07-05",
+    "endDate": "2026-10-02"
   },
-  "updatedAt": "2026-10-03T23:42:45.118631+00:00",
+  "updatedAt": "2026-10-04T23:54:25.561657+00:00",
   "totals": {
-    "clicks": 13,
-    "impressions": 76,
-    "ctr": 0.1711,
-    "position": 4.91
+    "clicks": 14,
+    "impressions": 80,
+    "ctr": 0.175,
+    "position": 4.85
   },
   "daily": [
     {
@@ -539,6 +539,27 @@
       "impressions": 3,
       "ctr": 0.3333,
       "position": 4.33
+    },
+    {
+      "date": "2026-09-30",
+      "clicks": 1,
+      "impressions": 3,
+      "ctr": 0.3333,
+      "position": 4.67
+    },
+    {
+      "date": "2026-10-01",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    {
+      "date": "2026-10-02",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 1.0
     }
   ],
   "topQueries": [
@@ -560,10 +581,10 @@
   "topPages": [
     {
       "key": "https://ododok.kr/",
-      "clicks": 5,
-      "impressions": 45,
-      "ctr": 0.1111,
-      "position": 5.67
+      "clicks": 6,
+      "impressions": 49,
+      "ctr": 0.1224,
+      "position": 5.51
     },
     {
       "key": "https://dongmin1.github.io/Ododok/",
