@@ -7,11 +7,11 @@
     "startDate": "2026-08-01",
     "endDate": "2026-10-29"
   },
-  "updatedAt": "2026-10-31T00:37:10.621231+00:00",
+  "updatedAt": "2026-10-31T23:59:46.507321+00:00",
   "totals": {
     "clicks": 13,
-    "impressions": 100,
-    "ctr": 0.13,
+    "impressions": 102,
+    "ctr": 0.1275,
     "position": 5.26
   },
   "daily": [
@@ -637,6 +637,13 @@
       "impressions": 1,
       "ctr": 0.0,
       "position": 6.0
+    },
+    {
+      "date": "2026-10-29",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 5.5
     }
   ],
   "topQueries": [
@@ -659,9 +666,9 @@
     {
       "key": "https://ododok.kr/",
       "clicks": 6,
-      "impressions": 67,
-      "ctr": 0.0896,
-      "position": 5.76
+      "impressions": 69,
+      "ctr": 0.087,
+      "position": 5.75
     },
     {
       "key": "https://dongmin1.github.io/Ododok/",
