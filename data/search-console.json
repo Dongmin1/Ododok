@@ -4,24 +4,17 @@
     "sc-domain:ododok.kr"
   ],
   "range": {
-    "startDate": "2026-08-07",
-    "endDate": "2026-11-04"
+    "startDate": "2026-08-08",
+    "endDate": "2026-11-05"
   },
-  "updatedAt": "2026-11-06T01:28:23.917901+00:00",
+  "updatedAt": "2026-11-07T00:49:00.205939+00:00",
   "totals": {
     "clicks": 10,
-    "impressions": 91,
-    "ctr": 0.1099,
-    "position": 5.42
+    "impressions": 92,
+    "ctr": 0.1087,
+    "position": 5.48
   },
   "daily": [
-    {
-      "date": "2026-08-07",
-      "clicks": 0,
-      "impressions": 0,
-      "ctr": 0,
-      "position": 0
-    },
     {
       "date": "2026-08-08",
       "clicks": 0,
@@ -637,6 +630,13 @@
       "impressions": 0,
       "ctr": 0,
       "position": 0
+    },
+    {
+      "date": "2026-11-04",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 11.0
     }
   ],
   "topQueries": [
@@ -652,9 +652,9 @@
     {
       "key": "https://ododok.kr/",
       "clicks": 7,
-      "impressions": 75,
-      "ctr": 0.0933,
-      "position": 5.76
+      "impressions": 76,
+      "ctr": 0.0921,
+      "position": 5.83
     },
     {
       "key": "https://ododok.kr/faq.html",
