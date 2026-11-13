@@ -4,24 +4,17 @@
     "sc-domain:ododok.kr"
   ],
   "range": {
-    "startDate": "2026-08-13",
-    "endDate": "2026-11-10"
+    "startDate": "2026-08-14",
+    "endDate": "2026-11-11"
   },
-  "updatedAt": "2026-11-12T02:11:46.966837+00:00",
+  "updatedAt": "2026-11-13T01:45:08.536204+00:00",
   "totals": {
     "clicks": 8,
-    "impressions": 89,
-    "ctr": 0.0899,
-    "position": 5.53
+    "impressions": 92,
+    "ctr": 0.087,
+    "position": 5.57
   },
   "daily": [
-    {
-      "date": "2026-08-13",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0.0,
-      "position": 4.0
-    },
     {
       "date": "2026-08-14",
       "clicks": 0,
@@ -637,24 +630,31 @@
       "impressions": 0,
       "ctr": 0,
       "position": 0
+    },
+    {
+      "date": "2026-11-10",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 6.0
     }
   ],
   "topQueries": [
     {
       "key": "ododok",
       "clicks": 4,
-      "impressions": 12,
-      "ctr": 0.3333,
-      "position": 3.25
+      "impressions": 11,
+      "ctr": 0.3636,
+      "position": 3.18
     }
   ],
   "topPages": [
     {
       "key": "https://ododok.kr/",
       "clicks": 8,
-      "impressions": 78,
-      "ctr": 0.1026,
-      "position": 5.73
+      "impressions": 81,
+      "ctr": 0.0988,
+      "position": 5.69
     },
     {
       "key": "https://ododok.kr/faq.html",
@@ -666,16 +666,9 @@
     {
       "key": "https://ododok.kr/project001.html",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0.0,
-      "position": 9.8
-    },
-    {
-      "key": "https://dongmin1.github.io/Ododok/",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0.0,
-      "position": 2.0
+      "position": 9.83
     },
     {
       "key": "https://ododok.kr/blog/index.html",
@@ -683,6 +676,13 @@
       "impressions": 4,
       "ctr": 0.0,
       "position": 12.75
+    },
+    {
+      "key": "https://dongmin1.github.io/Ododok/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 1.33
     },
     {
       "key": "https://ododok.kr/blog/post-001-book.html",
