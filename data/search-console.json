@@ -4,24 +4,17 @@
     "sc-domain:ododok.kr"
   ],
   "range": {
-    "startDate": "2026-08-19",
-    "endDate": "2026-11-16"
+    "startDate": "2026-08-20",
+    "endDate": "2026-11-17"
   },
-  "updatedAt": "2026-11-18T02:49:11.665392+00:00",
+  "updatedAt": "2026-11-19T02:27:29.654917+00:00",
   "totals": {
     "clicks": 7,
-    "impressions": 92,
-    "ctr": 0.0761,
-    "position": 5.99
+    "impressions": 93,
+    "ctr": 0.0753,
+    "position": 6.03
   },
   "daily": [
-    {
-      "date": "2026-08-19",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0.0,
-      "position": 2.0
-    },
     {
       "date": "2026-08-20",
       "clicks": 1,
@@ -637,15 +630,22 @@
       "impressions": 3,
       "ctr": 0.0,
       "position": 9.0
+    },
+    {
+      "date": "2026-11-16",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 6.0
     }
   ],
   "topQueries": [
     {
       "key": "ododok",
       "clicks": 3,
-      "impressions": 9,
-      "ctr": 0.3333,
-      "position": 3.56
+      "impressions": 8,
+      "ctr": 0.375,
+      "position": 3.75
     }
   ],
   "topPages": [
@@ -654,7 +654,7 @@
       "clicks": 7,
       "impressions": 82,
       "ctr": 0.0854,
-      "position": 6.02
+      "position": 6.12
     },
     {
       "key": "https://ododok.kr/faq.html",
@@ -673,9 +673,9 @@
     {
       "key": "https://ododok.kr/blog/index.html",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0.0,
-      "position": 12.75
+      "position": 10.6
     },
     {
       "key": "https://ododok.kr/blog/post-001-book.html",
